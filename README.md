@@ -6,45 +6,47 @@
 </p>
 
 <p align="center">
-  A Simple, Fast Vue 3 Component Library built with TypeScript
+  轻量、现代、美观的 Vue 3 UI 组件库
 </p>
 
-## Features
+## ✨ 特性
 
-- 🚀 Built with Vue 3 Composition API
-- ⚡ TypeScript support out of the box
-- 🌈 Modern, clean design
-- 📦 Lightweight and fast
-- 🔧 Fully tree-shakable
-- 🎨 Customizable theme
+- 🌸 默认淡粉色主题，清新优雅
+- ⚙️ 支持按需引入与全局注册
+- 🎨 自定义主题支持，可通过 CSS 覆盖默认样式
+- 📦 支持 Vite / Vue CLI 项目
+- 🧩 组件灵活扩展，适合二次封装
+- 🌍 内置国际化支持（可选）
 
-## Installation
+## 📦 安装
 
+使用 `pnpm` / `yarn` / `npm` 安装：
 ```bash
 # Using npm
-npm install peach-x
+npm install peach-ui
 
 # Using yarn
-yarn add peach-x
+yarn add peach-ui
 
 # Using pnpm
-pnpm add peach-x
+pnpm add peach-ui
 ```
 
-## Usage
+## 🛠 使用方式
 
 ```javascript
-// main.js
+// main.ts
 import { createApp } from 'vue'
+import App from './App.vue'
 import PeachX from 'peach-x'
-import 'peach-x/dist/style.css'
+import 'peach-x/theme/default.css' // 引入默认主题样式
 
 const app = createApp(App)
 app.use(PeachX)
 app.mount('#app')
 ```
 
-Then use components in your Vue files:
+然后你可以在 Vue 文件中使用组件：
 
 ```vue
 <template>
@@ -52,19 +54,19 @@ Then use components in your Vue files:
 </template>
 ```
 
-## Documentation
+## 📚 文档
 
-For full documentation, examples and API reference, visit our [documentation site](https://peach-x-docs.example.com).
+完整文档请访问：https://www.peach-x.com
 
-## Browser Support
+## 🌐 浏览器支持
 
-Peach X supports modern browsers and IE11+ (requires additional polyfills).
+Peach X 支持现代浏览器以及 IE11 及以上版本（需额外引入 polyfill）。
 
-## Contributing
+## 💖 贡献指南
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+我们欢迎任何形式的贡献！
 
-## License
+## 📄 License
 
 Peach X is open source software licensed as [MIT](https://opensource.org/licenses/MIT).
 
