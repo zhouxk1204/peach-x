@@ -2,9 +2,6 @@
 <p align="center">
   <a href="https://github.com/zhouxk1204/peach-x">
     <img src="https://img.shields.io/badge/node-%3E%3D18-47c219" alt="Node version" />
-    <img src="https://img.shields.io/npm/v/peach-x" alt="npm version" />
-    <img src="https://img.shields.io/bundlephobia/min/peach-x" alt="minified size" />
-    <img src="https://img.shields.io/npm/l/peach-x" alt="license" />
   </a>
 </p>
 
