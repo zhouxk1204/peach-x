@@ -1,10 +1,10 @@
 <h1 align="center">Peach X</h1>
 <p align="center">
-  <a href="https://github.com/zhouxk1204/peach-ui">
+  <a href="https://github.com/zhouxk1204/peach-x">
     <img src="https://img.shields.io/badge/node-%3E%3D18-47c219" alt="Node version" />
-    <img src="https://img.shields.io/npm/v/peach-ui" alt="npm version" />
-    <img src="https://img.shields.io/bundlephobia/min/peach-ui" alt="minified size" />
-    <img src="https://img.shields.io/npm/l/peach-ui" alt="license" />
+    <img src="https://img.shields.io/npm/v/peach-x" alt="npm version" />
+    <img src="https://img.shields.io/bundlephobia/min/peach-x" alt="minified size" />
+    <img src="https://img.shields.io/npm/l/peach-x" alt="license" />
   </a>
 </p>
 
@@ -25,13 +25,13 @@
 
 ```bash
 # Using npm
-npm install peach-ui
+npm install peach-x
 
 # Using yarn
-yarn add peach-ui
+yarn add peach-x
 
 # Using pnpm
-pnpm add peach-ui
+pnpm add peach-x
 ```
 
 ## Usage
@@ -39,11 +39,11 @@ pnpm add peach-ui
 ```javascript
 // main.js
 import { createApp } from 'vue'
-import PeachUI from 'peach-ui'
-import 'peach-ui/dist/style.css'
+import PeachX from 'peach-x'
+import 'peach-x/dist/style.css'
 
 const app = createApp(App)
-app.use(PeachUI)
+app.use(PeachX)
 app.mount('#app')
 ```
 
@@ -57,7 +57,7 @@ Then use components in your Vue files:
 
 ## Documentation
 
-For full documentation, examples and API reference, visit our [documentation site](https://peach-ui-docs.example.com).
+For full documentation, examples and API reference, visit our [documentation site](https://peach-x-docs.example.com).
 
 ## Browser Support
 
