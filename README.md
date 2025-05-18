@@ -23,13 +23,13 @@
 使用 `pnpm` / `yarn` / `npm` 安装：
 ```bash
 # Using npm
-npm install peach-ui
+npm install peach-x
 
 # Using yarn
-yarn add peach-ui
+yarn add peach-x
 
 # Using pnpm
-pnpm add peach-ui
+pnpm add peach-x
 ```
 
 ## 🛠 使用方式
