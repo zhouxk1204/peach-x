@@ -1,0 +1,20 @@
+{
+  "name": "@peach-x/playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.0",
+  "dependencies": {
+    "peach-x": "file:../"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4"
+  }
+}

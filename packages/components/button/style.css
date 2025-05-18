@@ -1,0 +1,91 @@
+.p-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: var(--p-border-radius);
+  font-size: 14px;
+  background-color: var(--p-primary-bg);
+  color: var(--p-primary-text);
+  transition: background-color 0.3s;
+}
+
+.p-button:hover {
+  background-color: var(--p-primary-hover);
+  cursor: pointer;
+}
+
+.p-button:active {
+  background-color: var(--p-primary-active);
+}
+
+.p-button[disabled] {
+  background-color: var(--p-disabled-bg);
+  color: var(--p-disabled-text);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* 不同类型按钮 */
+.p-button--primary {
+  background-color: var(--p-primary-bg);
+  color: var(--p-primary-text);
+}
+
+.p-button--primary:hover {
+  background-color: var(--p-primary-hover);
+}
+
+.p-button--primary:active {
+  background-color: var(--p-primary-active);
+}
+
+.p-button--success {
+  background-color: var(--p-success-bg);
+  color: var(--p-success-text);
+}
+
+.p-button--success:hover {
+  background-color: var(--p-success-hover);
+}
+
+.p-button--success:active {
+  background-color: var(--p-success-active);
+}
+
+.p-button--info {
+  background-color: var(--p-info-bg);
+  color: var(--p-info-text);
+}
+
+.p-button--info:hover {
+  background-color: var(--p-info-hover);
+}
+
+.p-button--info:active {
+  background-color: var(--p-info-active);
+}
+
+.p-button--warning {
+  background-color: var(--p-warning-bg);
+  color: var(--p-warning-text);
+}
+
+.p-button--warning:hover {
+  background-color: var(--p-warning-hover);
+}
+
+.p-button--warning:active {
+  background-color: var(--p-warning-active);
+}
+
+.p-button--danger {
+  background-color: var(--p-danger-bg);
+  color: var(--p-danger-text);
+}
+
+.p-button--danger:hover {
+  background-color: var(--p-danger-hover);
+}
+
+.p-button--danger:active {
+  background-color: var(--p-danger-active);
+}

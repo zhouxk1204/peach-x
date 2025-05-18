@@ -7,7 +7,7 @@ node_modules/
 .vitepress/dist/
 
 # VitePress 缓存
-.vitepress/cache/
+.vitepress/cache/*
 
 # 组件库的构建输出目录
 dist/

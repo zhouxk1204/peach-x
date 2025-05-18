@@ -1,0 +1,66 @@
+{
+  "name": "peach-x",
+  "version": "1.0.0",
+  "description": "Peach X component library",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./components": {
+      "import": "./dist/components/index.js",
+      "types": "./dist/types/components/index.d.ts"
+    },
+    "./components/*": {
+      "import": "./dist/components/*/index.js",
+      "types": "./dist/types/components/*/index.d.ts"
+    },
+    "./dist/theme/style.css": {
+      "default": "./dist/theme/style.css"
+    },
+     "./theme": {
+     "import": "./dist/theme/index.js",
+      "types": "./dist/types/theme/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "typesVersions": {
+    "*": {
+      "components/*": [
+        "dist/types/components/*/index.d.ts"
+      ]
+    }
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [
+    "vue3",
+    "component",
+    "ui",
+    "peach"
+  ],
+  "author": "zhouxk",
+  "license": "MIT",
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "@types/node": "^22.15.18",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "eslint": "^9.27.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  }
+}

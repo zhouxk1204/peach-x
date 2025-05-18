@@ -1,0 +1,8 @@
+packages:
+  - docs
+  - packages/*
+  - playground
+ignoredBuiltDependencies:
+  - esbuild
+overrides:
+  peach-x: link:../../../AppData/Local/pnpm/global/5/node_modules/peach-x
