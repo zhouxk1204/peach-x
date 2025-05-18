@@ -1,0 +1,31 @@
+# Node.js 和 pnpm 相关
+node_modules/
+.pnpm/
+.pnp.*
+
+# VitePress 构建输出目录
+.vitepress/dist/
+
+# VitePress 缓存
+.vitepress/cache/
+
+# 组件库的构建输出目录
+dist/
+build/
+
+# 环境配置文件
+.env
+.env.local
+.env.*.local
+
+# IDE 和操作系统生成的文件
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 依赖包
+**/node_modules/
+**/.pnpm/
+
+
