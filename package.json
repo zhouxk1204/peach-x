@@ -1,5 +1,6 @@
 {
   "name": "peach-x",
+  "private": false,
   "version": "1.0.0",
   "description": "Peach X component library",
   "main": "./dist/index.js",
@@ -40,7 +41,8 @@
     "**/*.css"
   ],
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "publish": "pnpm build && pnpm publish --no-git-checks"
   },
   "keywords": [
     "vue3",
