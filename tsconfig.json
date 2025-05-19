@@ -17,7 +17,8 @@
     "strict": true,
     "jsx": "preserve",
     "lib": ["ESNext", "DOM"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["vue"]
   },
-  "include": ["packages", "env.d.ts"]
+  "include": ["packages", "env.d.ts", "global.d.ts"]
 }

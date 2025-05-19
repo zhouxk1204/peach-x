@@ -21,7 +21,7 @@ const entries = fs.readdirSync(componentsDir).filter(name => {
 })
 
 const imports = entries
-  .map((dir: string) => `    ${pascal(`P-${dir}`)}: typeof import('./components/${dir}')['P${pascal(dir)}']`)
+  .map((dir: string) => `    ${pascal(`P-${dir}`)}: typeof import('peach-x')['P${pascal(dir)}']`)
   .join('\n')
 
 const content = `declare module 'vue' {
@@ -33,7 +33,7 @@ ${imports}
 export {}
 `
 
-const outputPath = path.resolve(distDir, 'global.d.ts')
+const outputPath = path.resolve(distDir, '../global.d.ts')
 fs.writeFileSync(outputPath, content)
 
 function pascal(str: string) {
