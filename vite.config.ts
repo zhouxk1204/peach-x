@@ -1,3 +1,10 @@
+/*
+ * @Author: error: git config user.name & please set dead value or install git
+ * @Date: 2025-05-19 10:56:53
+ * @LastEditors: error: git config user.name & please set dead value or install git
+ * @LastEditTime: 2025-05-19 11:17:53
+ * @Description: 
+ */
 import copy from "rollup-plugin-copy";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
@@ -18,6 +25,11 @@ export default defineConfig({
       hook: "writeBundle", // 打包完成后执行
     }),
   ],
+  resolve: {
+    alias: {
+      '@peach-x-components': path.resolve(__dirname, 'packages/components'),
+    },
+  },
   build: {
     sourcemap: true, // 开启 Source Map 生成
     lib: {
