@@ -1,8 +1,8 @@
 {
   "name": "peach-x",
-  "private": false,
-  "version": "1.0.1",
-  "description": "Peach X component library",
+  "version": "1.0.2",
+  "description": "A Simple, Fast Vue 3 Component Library built with TypeScript",
+  "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
@@ -22,8 +22,8 @@
     "./dist/theme/style.css": {
       "default": "./dist/theme/style.css"
     },
-     "./theme": {
-     "import": "./dist/theme/index.js",
+    "./theme": {
+      "import": "./dist/theme/index.js",
       "types": "./dist/types/theme/index.d.ts"
     }
   },
@@ -42,13 +42,14 @@
   ],
   "scripts": {
     "build": "vite build",
-    "publish": "pnpm build && pnpm publish --no-git-checks"
+    "publish": "pnpm build && pnpm publish --no-git-checks",
+    "gen:dts": "node --loader ts-node/esm scripts/generate-global-dts.ts"
   },
   "keywords": [
     "vue3",
     "component",
     "ui",
-    "peach"
+    "peach-x"
   ],
   "author": "zhouxk",
   "license": "MIT",
@@ -58,6 +59,8 @@
     "@vitejs/plugin-vue": "^5.2.4",
     "eslint": "^9.27.0",
     "rollup-plugin-copy": "^3.5.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
     "vite-plugin-dts": "^4.5.4"
