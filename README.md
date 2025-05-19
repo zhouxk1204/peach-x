@@ -53,6 +53,14 @@ app.mount('#app')
   <PButton>Click me</PButton>
 </template>
 ```
+## 🧩 Volar 支持
+如果您使用 Volar，请在 tsconfig.json 中通过 compilerOptions.types 指定全局组件类型。
+```tsconfig.json
+"compilerOptions": {
+  "types": ["peach-x/global"]
+}
+```
+使用组件时会自动识别出组件的类型并提供 IDE 提示。
 
 ## 📚 文档
 
