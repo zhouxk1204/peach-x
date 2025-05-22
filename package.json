@@ -1,42 +1,55 @@
 {
   "name": "peach-x",
-  "version": "1.0.2",
+  "version": "1.0.9",
   "description": "A Simple, Fast Vue 3 Component Library built with TypeScript",
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/types/index.d.ts"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./resolver": {
+      "import": "./dist/resolver/index.mjs",
+      "require": "./dist/resolver/index.cjs"
     },
     "./components": {
-      "import": "./dist/components/index.js",
-      "types": "./dist/types/components/index.d.ts"
+      "import": "./dist/components/index.mjs",
+      "require": "./dist/components/index.cjs"
     },
     "./components/*": {
-      "import": "./dist/components/*/index.js",
-      "types": "./dist/types/components/*/index.d.ts"
+      "import": "./dist/components/*/index.mjs",
+      "require": "./dist/components/*/index.cjs"
     },
-    "./dist/theme/style.css": {
+    "./theme/style.css": {
       "default": "./dist/theme/style.css"
     },
+    "./theme/dark.css": {
+      "default": "./dist/theme/dark.css"
+    },
     "./theme": {
-      "import": "./dist/theme/index.js",
-      "types": "./dist/types/theme/index.d.ts"
+      "import": "./dist/theme/index.mjs",
+      "require": "./dist/theme/index.cjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "components/*": [
+        "dist/types/components/*/index.d.ts"
+      ],
+      "resolver": [
+        "dist/types/resolver/index.d.ts"
+      ],
+      "theme": [
+        "dist/types/theme/index.d.ts"
+      ]
     }
   },
   "files": [
     "dist"
   ],
-  "typesVersions": {
-    "*": {
-      "components/*": [
-        "dist/types/components/*/index.d.ts"
-      ]
-    }
-  },
   "sideEffects": [
     "**/*.css"
   ],
@@ -62,7 +75,9 @@
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
-    "vite-plugin-dts": "^4.5.4"
+    "vite-plugin-dts": "^4.5.4",
+    "unplugin-auto-import": "^19.2.0",
+    "unplugin-vue-components": "^28.5.0"
   },
   "peerDependencies": {
     "vue": "^3.3.0"

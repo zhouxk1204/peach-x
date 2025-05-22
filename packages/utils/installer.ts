@@ -1,5 +1,5 @@
 import type { App } from "vue";
-import { PButton } from "./components";
+import { PButton } from "../components";
 
 const components = [PButton /* ... */];
 

@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { ref, toRefs } from 'vue'
-import { ButtonProps } from './button.types'
+import { ButtonProps } from './types'
 
 defineOptions({
   name: 'PButton',
