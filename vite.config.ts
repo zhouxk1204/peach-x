@@ -26,7 +26,6 @@ export default defineConfig({
         "theme/index": path.resolve(__dirname, "packages/theme/index.ts"),
       },
       name: "PeachX",
-      formats: ["es", "cjs"],
     },
     rollupOptions: {
       external: ["vue"],

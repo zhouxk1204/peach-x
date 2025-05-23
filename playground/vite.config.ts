@@ -11,6 +11,7 @@ export default defineConfig({
     }),
     Components({
       resolvers: [PeachXResolver],
+      dts: 'src/components.d.ts', 
     }),
   ],
   server: {

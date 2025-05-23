@@ -1,0 +1,5 @@
+{
+  "compilerOptions": {
+    "types": ["peach-x/global"]
+  },
+}

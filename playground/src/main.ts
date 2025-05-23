@@ -1,4 +1,4 @@
-import 'peach-x/theme/dark.css'
+import 'peach-x/theme/index.css'
 
 import { ThemeConfig, applyTheme, useTheme } from 'peach-x/theme';
 
@@ -7,7 +7,7 @@ import { createApp } from 'vue'
 
 const {toggleTheme} = useTheme();
 const themeConfig: ThemeConfig = {
-    primary: '#8ec8be'
+    primary: '#8ef8be'
 }
 applyTheme(themeConfig);
 toggleTheme();
