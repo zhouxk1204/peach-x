@@ -1,6 +1,6 @@
 {
   "name": "peach-x",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "description": "A Simple, Fast Vue 3 Component Library built with TypeScript",
   "type": "module",
   "main": "./dist/lib/index.cjs",
@@ -22,19 +22,23 @@
   "exports": {
     ".": {
       "import": "./dist/es/index.mjs",
-      "require": "./dist/lib/index.cjs"
+      "require": "./dist/lib/index.cjs",
+      "types": "./dist/types/index.d.ts"
     },
     "./resolver": {
       "import": "./dist/es/resolver/index.mjs",
-      "require": "./dist/lib/resolver/index.cjs"
+      "require": "./dist/lib/resolver/index.cjs",
+      "types": "./dist/types/resolver/index.d.ts"
     },
     "./components/*": {
       "import": "./dist/es/components/*/index.mjs",
-      "require": "./dist/lib/components/*/index.cjs"
+      "require": "./dist/lib/components/*/index.cjs",
+      "types": "./dist/types/components/*/index.d.ts"
     },
     "./theme": {
       "import": "./dist/es/theme/index.mjs",
-      "require": "./dist/lib/theme/index.cjs"
+      "require": "./dist/lib/theme/index.cjs",
+      "types": "./dist/types/theme/index.d.ts"
     },
     "./theme/*": {
       "default": "./dist/theme/*"

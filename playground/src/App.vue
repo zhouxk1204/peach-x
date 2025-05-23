@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PButton @click="onclick">click me!</PButton>
+    <PButton @click="onclick" type="danger">click me!</PButton>
   </div>
 </template>
 
