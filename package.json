@@ -3,46 +3,52 @@
   "version": "1.0.8",
   "description": "A Simple, Fast Vue 3 Component Library built with TypeScript",
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "main": "./dist/lib/index.cjs",
+  "module": "./dist/es/index.mjs",
   "types": "./dist/types/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "components/*": [
+        "dist/types/components/*/index.d.ts"
+      ],
+      "resolver": [
+        "dist/types/resolver/index.d.ts"
+      ],
+      "theme": [
+        "dist/types/theme/index.d.ts"
+      ]
+    }
+  },
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/types/index.d.ts"
+      "import": "./dist/es/index.mjs",
+      "require": "./dist/lib/index.cjs"
     },
-    "./components": {
-      "import": "./dist/components/index.js",
-      "types": "./dist/types/components/index.d.ts"
+    "./resolver": {
+      "import": "./dist/es/resolver/index.mjs",
+      "require": "./dist/lib/resolver/index.cjs"
     },
     "./components/*": {
-      "import": "./dist/components/*/index.js",
-      "types": "./dist/types/components/*/index.d.ts"
-    },
-    "./dist/theme/style.css": {
-      "default": "./dist/theme/style.css"
+      "import": "./dist/es/components/*/index.mjs",
+      "require": "./dist/lib/components/*/index.cjs"
     },
     "./theme": {
-      "import": "./dist/theme/index.js",
-      "types": "./dist/types/theme/index.d.ts"
+      "import": "./dist/es/theme/index.mjs",
+      "require": "./dist/lib/theme/index.cjs"
+    },
+    "./theme/*": {
+      "default": "./dist/theme/*"
     }
   },
   "files": [
     "dist",
     "global.d.ts"
   ],
-  "typesVersions": {
-    "*": {
-      "components/*": [
-        "dist/types/components/*/index.d.ts"
-      ]
-    }
-  },
   "sideEffects": [
     "**/*.css"
   ],
   "scripts": {
-    "build": "vite build",
+   "build": "tsx scripts/build-css.ts && vite build",
     "gen:dts": "node --loader ts-node/esm scripts/generate-global-dts.ts",
     "version:patch": "npm version patch --no-git-tag-version",
     "release": "pnpm run version:patch && pnpm run build && pnpm publish --no-git-checks"
@@ -59,11 +65,17 @@
   "devDependencies": {
     "@types/node": "^22.15.18",
     "@vitejs/plugin-vue": "^5.2.4",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.7",
     "eslint": "^9.27.0",
-    "rollup-plugin-copy": "^3.5.0",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
+    "unplugin-auto-import": "^19.2.0",
+    "unplugin-vue-components": "^28.5.0",
     "vite": "^6.3.5",
     "vite-plugin-dts": "^4.5.4"
   },

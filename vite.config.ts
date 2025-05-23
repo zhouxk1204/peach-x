@@ -1,7 +1,6 @@
-import copy from "rollup-plugin-copy";
+import path, { resolve } from "path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
-import path from "path";
 import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
@@ -12,37 +11,41 @@ export default defineConfig({
       outDir: "dist/types",
       copyDtsFiles: true,
     }),
-    // 在 rollup 里用 copy 插件拷贝 dark.css
-    copy({
-      targets: [{ src: "packages/theme/dark.css", dest: "dist/theme" }],
-      hook: "writeBundle", // 打包完成后执行
-    }),
   ],
+  resolve: {
+    alias: {
+      "@peach-x": path.resolve(__dirname, "packages"),
+    },
+  },
   build: {
     sourcemap: true, // 开启 Source Map 生成
     lib: {
-      entry: path.resolve(__dirname, "packages/index.ts"),
+      entry: {
+        index: path.resolve(__dirname, "packages/index.ts"),
+        "theme/index": path.resolve(__dirname, "packages/theme/index.ts"),
+      },
       name: "PeachX",
-      formats: ["es"],
-      fileName: () => "index.js"
+      formats: ["es", "cjs"],
     },
     rollupOptions: {
       external: ["vue"],
-      input: path.resolve(__dirname, "packages/index.ts"),
-      output: {
-        format: "es",
-        preserveModules: true, // 保留模块结构
-        preserveModulesRoot: "packages", // 以 packages 作为根目录开始保留
-        entryFileNames: "[name].js",
-        assetFileNames: (chunkInfo) => {
-          const name = chunkInfo.names[0]
-          if (name && name.endsWith(".css")) {
-            // 保留 theme 目录结构
-            return "theme/style.css";
-          }
-          return "assets/[name][extname]";
+      output: [
+        {
+          format: "es",
+          preserveModules: true,
+          preserveModulesRoot: "packages",
+          dir: resolve(__dirname, "dist/es"),
+          entryFileNames: "[name].mjs",
         },
-      },
+        {
+          format: "cjs",
+          preserveModules: true,
+          preserveModulesRoot: "packages",
+          dir: resolve(__dirname, "dist/lib"),
+          entryFileNames: "[name].cjs",
+          exports: "named",
+        },
+      ],
     },
   },
 });

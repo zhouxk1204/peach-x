@@ -1,15 +1,14 @@
-import installer from './installer';
+export { PeachXResolver } from './resolver'
 
-export default installer;
+// import installer from './components/installer';
 
-// 全量注册支持
-export const install = installer.install;
+// export default installer;
 
-import pkg from '../package.json' assert { type: 'json' };
-export const version = pkg.version; 
+// // 全量注册支持
+// export const install = installer.install;
 
 export * from './components'
 export * from './theme'
-export * from './utils'
-export * from './constants'
+// export * from './utils'
+// export * from './constants'
 // export * from './locale' // 如果有国际化模块

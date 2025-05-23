@@ -20,5 +20,5 @@
     "skipLibCheck": true,
     "types": ["vue"]
   },
-  "include": ["packages", "env.d.ts", "global.d.ts"]
+  "include": ["packages", "env.d.ts", "global.d.ts", "postcss.config.js", "scripts/build-css.tss.tsscripts/build-css.tsd-css.ts"]
 }

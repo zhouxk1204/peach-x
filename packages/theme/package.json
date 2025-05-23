@@ -1,0 +1,17 @@
+{
+  "name": "@peach-x/theme",
+  "version": "0.0.1",
+  "description": "peach-x component library theme package",
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "index.d.ts",
+  "keywords": [
+    "theme",
+    "peach-x",
+    "component-library",
+    "ui",
+    "style"
+  ],
+  "author": "zhouxk",
+  "license": "MIT"
+}

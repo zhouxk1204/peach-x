@@ -1,64 +1,64 @@
-/* dark-theme.css */
-:root {
-  /* 桃子淡粉色主色 - 暗黑模式适配 */
-  --p-primary: #d68a9a; /* 暗色模式下稍深的桃子粉 */
-  --p-primary-hover: #d17285; /* hover 状态颜色 - 更深 */
-  --p-primary-active: #c45a70; /* active 状态颜色 - 最深 */
-  --p-primary-bg: var(--p-primary);  /* 背景色 */
-  --p-primary-text: #fff;  /* 文字色 */
-  
-  /* 背景色 */
-  --p-bg: #181818;  /* 暗黑主题背景 */
-  --p-bg-muted: #2a2a2a;  /* 暗背景色 */
-  
-  /* 文本颜色 */
-  --p-text: #f0f0f0;  /* 亮色文字 */
-  --p-text-muted: #b1b1b1;  /* 辅助文本色 */
-  
-  /* 按钮色 */
-  --p-primary-bg: var(--p-primary); /* 按钮背景色 */
-  --p-primary-text: #fff; /* 按钮文字色 */
-  
-  /* 成功状态色 */
-  --p-success: #16a34a; /* 成功颜色 */
-  --p-success-hover: #15803d; /* hover 状态颜色 */
-  --p-success-active: #0f4b1c; /* active 状态颜色 */
+html.dark {
+  /* 主色调 - 桃子粉（暗色优化） */
+  --p-primary: #d68a9a;
+  --p-primary-hover: #c77285;
+  --p-primary-active: #b85a70;
+  --p-primary-bg: var(--p-primary);
+  --p-primary-text: #fff;
+
+  /* 背景 */
+  --p-bg: #1e1e1e;
+  --p-bg-muted: #2a2a2a;
+  --p-surface: #2c2c2c;
+  --p-surface-elevated: #3a3a3a;
+
+  /* 文字 */
+  --p-text: #e5e5e5;
+  --p-text-muted: #a0a0a0;
+
+  /* 成功 */
+  --p-success: #16a34a;
+  --p-success-hover: #15803d;
+  --p-success-active: #116231;
   --p-success-bg: var(--p-success);
   --p-success-text: #fff;
-  
-  /* 信息状态色 */
-  --p-info: #3b82f6; /* 信息颜色 */
-  --p-info-hover: #2563eb; /* hover 状态颜色 */
-  --p-info-active: #1d4ed8; /* active 状态颜色 */
+
+  /* 信息 */
+  --p-info: #3b82f6;
+  --p-info-hover: #2563eb;
+  --p-info-active: #1d4ed8;
   --p-info-bg: var(--p-info);
   --p-info-text: #fff;
-  
-  /* 警告状态色 */
-  --p-warning: #f59e0b; /* 警告颜色 */
-  --p-warning-hover: #d97706; /* hover 状态颜色 */
-  --p-warning-active: #b45309; /* active 状态颜色 */
+
+  /* 警告 */
+  --p-warning: #f59e0b;
+  --p-warning-hover: #d97706;
+  --p-warning-active: #b45309;
   --p-warning-bg: var(--p-warning);
   --p-warning-text: #fff;
 
-  /* 危险状态色 */
-  --p-danger: #ef4444; /* 危险颜色 */
-  --p-danger-hover: #dc2626; /* hover 状态颜色 */
-  --p-danger-active: #b91c1c; /* active 状态颜色 */
+  /* 危险 */
+  --p-danger: #ef4444;
+  --p-danger-hover: #dc2626;
+  --p-danger-active: #b91c1c;
   --p-danger-bg: var(--p-danger);
   --p-danger-text: #fff;
-  
-  /* 在特定背景下的文字颜色 */
-  --p-text-on-primary: #fff; /* primary 背景上的文字颜色 */
-  --p-text-on-success: #fff; /* success 背景上的文字颜色 */
-  --p-text-on-info: #fff; /* info 背景上的文字颜色 */
-  --p-text-on-warning: #fff; /* warning 背景上的文字颜色 */
-  --p-text-on-danger: #fff; /* danger 背景上的文字颜色 */
-  
-  /* 禁用状态 */
-  --p-disabled-bg: #444; /* 禁用按钮的背景颜色 */
-  --p-disabled-text: #666; /* 禁用按钮的文字颜色 */
-  
+
+  /* 特定背景上的文字 */
+  --p-text-on-primary: #fff;
+  --p-text-on-success: #fff;
+  --p-text-on-info: #fff;
+  --p-text-on-warning: #fff;
+  --p-text-on-danger: #fff;
+
+  /* 禁用 */
+  --p-disabled-bg: #3c3c3c;
+  --p-disabled-text: #666;
+
   /* 边框 */
-  --p-border-radius: 4px; /* 默认圆角 */
-  --p-border: 1px solid #333; /* 默认边框 */
+  --p-border-radius: 4px;
+  --p-border: 1px solid #333;
+
+  /* 阴影 */
+  --p-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
