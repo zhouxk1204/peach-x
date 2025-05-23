@@ -12,15 +12,6 @@
     "ui",
     "style"
   ],
-  "scripts": {
-    "clean": "rimraf dist",
-    "build": "gulp --require tsx/dist/loader.cjs"
-  },
-  "sideEffects": [
-    "**/*.css"
-  ],
   "author": "zhouxk",
-  "license": "MIT",
-  "devDependencies": {
-  }
+  "license": "MIT"
 }

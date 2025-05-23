@@ -1,11 +1,4 @@
-/*
- * @Author: zhouxk
- * @Date: 2025-05-22 11:03:27
- * @LastEditors: zhouxk
- * @LastEditTime: 2025-05-22 11:32:07
- * @Description: 
- */
-import { ThemeMode, UseThemeOptions } from '../types/types';
+import type { ThemeMode, UseThemeOptions } from './types';
 import { onMounted, ref, watch } from 'vue';
 
 export function useTheme(options: UseThemeOptions = {}) {

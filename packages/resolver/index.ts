@@ -1,17 +1,19 @@
 import type { ComponentResolver } from 'unplugin-vue-components/types'
 
 export const PeachXResolver: ComponentResolver = {
-  type: 'component',
+  type: 'component' as const,
   resolve(name: string) {
-    if (name.startsWith('P')) {
-      const componentName = name.slice(1)
-      return {
-        name: componentName,
-        // 精确到组件目录
-        from: `peach-x/es/components/${componentName.toLowerCase()}`,
-        // 样式文件
-        // sideEffects: 'peach-x/dist/theme/style.css'
-      }
+    if (!name.startsWith('P')) return
+
+    const componentName = name.slice(1)
+    const kebabCaseName = componentName
+      .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+      .toLowerCase()
+
+    return {
+      name: name,
+      from: `peach-x/components/${kebabCaseName}`,
+      sideEffects: `peach-x/theme/${kebabCaseName}.css`,
     }
-  }
+  },
 }

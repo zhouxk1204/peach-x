@@ -2,8 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@peach-x/*": ["packages/*"],
-      "@peach-x-components": ["packages/components/*"]
+      "@peach-x/*": ["packages/*"]
     },
     "rootDir": "packages",
     "outDir": "dist",
@@ -20,5 +19,5 @@
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true
   },
-  "include": ["packages", "env.d.ts"]
+  "include": ["packages", "env.d.ts", "postcss.config.js", "scripts/build-css.tss.tsscripts/build-css.tsd-css.ts"]
 }

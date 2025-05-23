@@ -1,6 +1,6 @@
 {
   "name": "@peach-x/playground",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.ts",
   "scripts": {
@@ -12,7 +12,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
-    "peach-x": "file:../"
+    "peach-x": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.4"

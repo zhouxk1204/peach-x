@@ -1,4 +1,4 @@
-import { SFCWithInstall, withInstall } from '../../utils/withInstall'
+import { SFCWithInstall, withInstall } from '../withInstall'
 
 import Button from './src/button.vue'
 
