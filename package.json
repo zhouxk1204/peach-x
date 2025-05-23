@@ -1,6 +1,6 @@
 {
   "name": "peach-x",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A Simple, Fast Vue 3 Component Library built with TypeScript",
   "type": "module",
   "main": "./dist/lib/index.cjs",
@@ -9,13 +9,13 @@
   "typesVersions": {
     "*": {
       "components/*": [
-        "dist/types/components/*/index.d.ts"
+        "./dist/types/components/*/index.d.ts"
       ],
       "resolver": [
-        "dist/types/resolver/index.d.ts"
+        "./dist/types/resolver/index.d.ts"
       ],
       "theme": [
-        "dist/types/theme/index.d.ts"
+        "./dist/types/theme/index.d.ts"
       ]
     }
   },
@@ -48,7 +48,7 @@
     "**/*.css"
   ],
   "scripts": {
-   "build": "tsx scripts/build-css.ts && vite build",
+    "build": "tsx scripts/build-css.ts && vite build",
     "gen:dts": "node --loader ts-node/esm scripts/generate-global-dts.ts",
     "version:patch": "npm version patch --no-git-tag-version",
     "release": "pnpm run version:patch && pnpm run build && pnpm publish --no-git-checks"

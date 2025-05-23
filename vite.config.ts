@@ -1,4 +1,5 @@
 import path, { resolve } from "path";
+
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import vue from "@vitejs/plugin-vue";
@@ -25,7 +26,6 @@ export default defineConfig({
         "theme/index": path.resolve(__dirname, "packages/theme/index.ts"),
       },
       name: "PeachX",
-      formats: ["es", "cjs"],
     },
     rollupOptions: {
       external: ["vue"],
