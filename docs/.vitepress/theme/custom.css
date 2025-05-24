@@ -1,0 +1,11 @@
+:root {
+  --vp-c-brand-1: #f39cb2;
+  --vp-c-brand-2: #ca6780;
+  --vp-button-brand-bg: #f39cb2;
+  --vp-button-brand-hover-bg: #e6a8be;
+}
+
+/* 隐藏所有自定义块的标题 */
+.vp-doc .custom-block .custom-block-title {
+    display: none;
+  }
