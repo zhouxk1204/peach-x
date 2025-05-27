@@ -39,7 +39,7 @@ pnpm add peach-x
 import { createApp } from 'vue'
 import App from './App.vue'
 import PeachX from 'peach-x'
-import 'peach-x/dist/theme/style.css' // 引入默认主题样式
+import 'peach-x/theme/style.css' // 引入默认主题样式
 
 const app = createApp(App)
 app.use(PeachX)

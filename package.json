@@ -1,6 +1,6 @@
 {
   "name": "peach-x",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "A Simple, Fast Vue 3 Component Library built with TypeScript",
   "type": "module",
   "main": "./dist/lib/index.cjs",
@@ -52,6 +52,8 @@
     "**/*.css"
   ],
   "scripts": {
+    "docs:dev": "pnpm --filter @peach-x/docs docs:dev",
+    "play:dev": "pnpm --filter @peach-x/playground dev",
     "build": "tsx scripts/build-css.ts && vite build",
     "gen:dts": "node --loader ts-node/esm scripts/generate-global-dts.ts",
     "version:patch": "npm version patch --no-git-tag-version",
