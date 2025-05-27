@@ -1,8 +1,8 @@
 html.dark {
   /* 主色调 - 桃子粉（暗色优化） */
-  --p-primary: #d68a9a;
-  --p-primary-hover: #c77285;
-  --p-primary-active: #b85a70;
+  --p-primary: #c46a96;
+  --p-primary-hover: #a9507c;
+  --p-primary-active: #8e3963;
   --p-primary-bg: var(--p-primary);
   --p-primary-text: #fff;
 
