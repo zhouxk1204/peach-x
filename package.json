@@ -1,6 +1,6 @@
 {
   "name": "peach-x",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "description": "A Simple, Fast Vue 3 Component Library built with TypeScript",
   "type": "module",
   "main": "./dist/lib/index.cjs",
@@ -59,6 +59,11 @@
     "version:patch": "npm version patch --no-git-tag-version",
     "release": "pnpm run version:patch && pnpm run build && pnpm publish --no-git-checks"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhouxk1204/peach-x.git"
+  },
+  "homepage": "www.peach-x.com",
   "keywords": [
     "vue3",
     "component",
