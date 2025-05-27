@@ -3,12 +3,12 @@
 layout: home
 
 hero:
-  name: "🍑 Peach X"
+  name: "Peach X"
   text: "轻量、现代、美观的 Vue 3 UI 组件库"
-  tagline: My great project tagline
+  tagline: 让开发更简单，让界面更出色
   actions:
     - theme: brand
-      text: 快速开始
+      text: 开始使用
       link: /guides/installation
     - theme: alt
       text: 组件文档

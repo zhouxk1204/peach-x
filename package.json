@@ -1,6 +1,6 @@
 {
   "name": "peach-x",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "A Simple, Fast Vue 3 Component Library built with TypeScript",
   "type": "module",
   "main": "./dist/lib/index.cjs",
@@ -21,24 +21,24 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/es/index.mjs",
-      "require": "./dist/lib/index.cjs",
-      "types": "./dist/types/index.d.ts"
+      "require": "./dist/lib/index.cjs"
     },
     "./resolver": {
+      "types": "./dist/types/resolver/index.d.ts",
       "import": "./dist/es/resolver/index.mjs",
-      "require": "./dist/lib/resolver/index.cjs",
-      "types": "./dist/types/resolver/index.d.ts"
+      "require": "./dist/lib/resolver/index.cjs"
     },
     "./components/*": {
+      "types": "./dist/types/components/*/index.d.ts",
       "import": "./dist/es/components/*/index.mjs",
-      "require": "./dist/lib/components/*/index.cjs",
-      "types": "./dist/types/components/*/index.d.ts"
+      "require": "./dist/lib/components/*/index.cjs"
     },
     "./theme": {
+      "types": "./dist/types/theme/index.d.ts",
       "import": "./dist/es/theme/index.mjs",
-      "require": "./dist/lib/theme/index.cjs",
-      "types": "./dist/types/theme/index.d.ts"
+      "require": "./dist/lib/theme/index.cjs"
     },
     "./theme/*": {
       "default": "./dist/theme/*"
@@ -52,6 +52,8 @@
     "**/*.css"
   ],
   "scripts": {
+    "docs:dev": "pnpm --filter @peach-x/docs docs:dev",
+    "play:dev": "pnpm --filter @peach-x/playground dev",
     "build": "tsx scripts/build-css.ts && vite build",
     "gen:dts": "node --loader ts-node/esm scripts/generate-global-dts.ts",
     "version:patch": "npm version patch --no-git-tag-version",

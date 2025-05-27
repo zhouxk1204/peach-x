@@ -5,11 +5,19 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, toRefs } from 'vue'
+import { inject, ref, toRefs } from 'vue'
 import { ButtonProps } from './types'
+import { CONFIG_PROVIDER_KEY } from '@peach-x/components/config-provider/src/context';
+import { computed } from 'vue';
 
 defineOptions({
   name: 'PButton',
+})
+
+const config = inject(CONFIG_PROVIDER_KEY, {
+  size: 'medium',
+  theme: 'light',
+  locale: {}
 })
 
 const props = withDefaults(defineProps<ButtonProps>(), {
@@ -19,7 +27,11 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   nativeType: 'button',
 })
 
-const { type, disabled, size, nativeType } = toRefs(props)
+const { type, disabled, nativeType } = toRefs(props)
+
+const size = computed(() => {
+  return config.size || props.size || 'medium'
+})
 
 const _ref = ref<HTMLButtonElement | null>(null)
 

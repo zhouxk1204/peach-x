@@ -1,9 +1,9 @@
 /* default-theme.css */
 :root {
   /* 桃子淡粉色主色 */
-  --p-primary: #f8c8d1; /* 桃子淡粉色 */
-  --p-primary-hover: #f39cb2; /* hover 状态颜色 */
-  --p-primary-active: #f08e9b; /* active 状态颜色 */
+  --p-primary: #eb80b1; /* 桃子淡粉色 */
+  --p-primary-hover: #e05c97; /* hover 状态颜色 */
+  --p-primary-active: #d5387d; /* active 状态颜色 */
   --p-primary-bg: var(--p-primary);  /* 背景色 */
   --p-primary-text: #fff;  /* 文字色 */
   
