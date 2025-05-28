@@ -1,10 +1,10 @@
 # 安装
 ## 环境要求
-在开始使用 Peach X 前，请确保您的开发环境符合以下要求
+在开始使用 `Peach X` 前，请确保您的开发环境符合以下要求
 - [Vue.js](https://vuejs.org/) ≥ 3.3.0
 - [Node.js](https://nodejs.org/) ≥ 18.x
 ## 版本​
-Peach X 目前还处于快速开发迭代中。
+`Peach X` 目前还处于快速开发迭代中。
 
 ## 安装步骤
 选择您偏好的包管理工具执行安装命令：
@@ -31,4 +31,4 @@ npm list peach-x
 ```shell
 npm install peach-x@latest  # 安装最新版
 ```
-现在，您可以开始使用 Peach X 构建优雅的 Vue 应用了！
+现在，您可以开始使用 `Peach X` 构建优雅的 Vue 应用了！

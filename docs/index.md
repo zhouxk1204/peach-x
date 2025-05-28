@@ -18,11 +18,14 @@ hero:
       link: https://github.com/zhouxk1204/peach-x
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 专注 Vue，纯粹轻量
+    details: 零第三方依赖，仅基于 Vue 3 构建，不引入冗余代码，保持核心精简，性能极致。
+    icon: ⚡
+  - title: 开箱即用，极简开发
+    details: 无需额外配置，不依赖任何其他库，直接引入即可使用，让开发回归简单。
+    icon: 🚀
+  - title: 优雅设计，灵活定制
+    details: 提供精心打磨的 Vue 组件，支持主题样式轻松调整，不锁死你的设计风格。
+    icon: 🎨
 ---
 

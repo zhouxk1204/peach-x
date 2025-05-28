@@ -53,6 +53,7 @@
   ],
   "scripts": {
     "docs:dev": "pnpm --filter @peach-x/docs docs:dev",
+    "docs:build": "pnpm --filter @peach-x/docs docs:build",
     "play:dev": "pnpm --filter @peach-x/playground dev",
     "build": "tsx scripts/build-css.ts && vite build",
     "gen:dts": "node --loader ts-node/esm scripts/generate-global-dts.ts",
