@@ -1,11 +1,3 @@
-/*
- * @Author: zhouxk 346960620@qq.com
- * @Date: 2025-05-27 16:40:25
- * @LastEditors: zhouxk 346960620@qq.com
- * @LastEditTime: 2025-05-28 16:11:00
- * @FilePath: /peach-x/docs/.vitepress/config.mts
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
 import { defineConfig } from "vitepress";
@@ -26,7 +18,8 @@ export default defineConfig({
   title: "Peach X",
   description: "轻量、现代、美观的 Vue 3 UI 组件库",
   themeConfig: {
-    siteTitle: '🍑 Peach X',
+    siteTitle: 'Peach X',
+    logo: '/logo.png',
     // 编辑链接
     editLink: {
       pattern: 'https://github.com/zhouxk1204/peach-x/tree/dev/docs/:path',

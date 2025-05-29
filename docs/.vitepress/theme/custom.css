@@ -1,8 +1,10 @@
 :root {
-  --vp-c-brand-1: #eb80b1;
-  --vp-c-brand-2: #d5387d;
-  --vp-button-brand-bg: #eb80b1;
-  --vp-button-brand-hover-bg: #e05c97;
+  --vp-c-brand-1: #c03797
+  --vp-c-brand-2: #FF4FA2;
+  --vp-button-brand-bg: #c03797;
+  --vp-button-brand-hover-bg: #FF4FA2;
+  --vp-home-hero-image-filter: blur(88px);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #f65854 50%,  #c03797 50%);
 }
 
 /* 隐藏所有自定义块的标题 */
@@ -11,9 +13,9 @@
 }
 
 .clip.name {
-  background: linear-gradient(120deg, #eb80b1 30%, #bd34fe);
+  background: linear-gradient(120deg, #c03797 30%, #f65854);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15), 1px 2px 6px rgba(0, 0, 0, 0.1);
+  /* text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3), 1px 2px 6px rgba(0, 0, 0, 0.1); */
 }

@@ -27,7 +27,7 @@ import { VPTeamMembers } from 'vitepress/theme'
 
 const members = [
   {
-    avatar: 'https://peach-1322235980.cos.ap-chengdu.myqcloud.com/avatar%2F1712892629389_af1d03df.jpg',
+    avatar: '/avatar.jpg',
     name: 'zhouxk',
     title: 'Creator & Developer',
     links: [
