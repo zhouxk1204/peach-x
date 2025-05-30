@@ -1,3 +1,5 @@
+import * as sass from 'sass'; // 引入 sass 库
+
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 import { fileURLToPath } from 'node:url';
@@ -16,21 +18,28 @@ if (!fs.existsSync(distDir)) {
   fs.mkdirSync(distDir, { recursive: true });
 }
 
-// 读取所有 .css 文件（不含子目录）
+// 读取所有 .scss 和 .css 文件（不含子目录）
 const files = fs
   .readdirSync(srcDir)
-  .filter((file) => path.extname(file) === '.css');
+  .filter((file) => ['.css', '.scss'].includes(path.extname(file)));
 
 Promise.all(
   files.map(async (file) => {
     const filePath = path.join(srcDir, file);
-    const css = fs.readFileSync(filePath, 'utf-8');
-    const result = await postcss([autoprefixer, cssnano]).process(css, {
+    let css;
+    if (path.extname(file) === '.scss') {
+      // 编译 SCSS 文件为 CSS
+      const result = sass.compile(filePath);
+      css = result.css.toString();
+    } else {
+      css = fs.readFileSync(filePath, 'utf-8');
+    }
+    const processedResult = await postcss([autoprefixer, cssnano]).process(css, {
       from: filePath,
-      to: path.join(distDir, file),
+      to: path.join(distDir, path.basename(file, path.extname(file)) + '.css'),
     });
-    fs.writeFileSync(path.join(distDir, file), result.css);
-    console.log(`✔ ${file} written to dist/theme/`);
+    fs.writeFileSync(path.join(distDir, path.basename(file, path.extname(file)) + '.css'), processedResult.css);
+    console.log(`✔ ${path.basename(file, path.extname(file)) + '.css'} written to dist/theme/`);
   })
 ).catch((err) => {
   console.error('❌ Build failed:', err);

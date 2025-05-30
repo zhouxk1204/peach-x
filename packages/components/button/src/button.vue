@@ -1,5 +1,17 @@
 <template>
-  <button ref="_ref" :class="`p-button p-button--${type} p-button--${size}`" :disabled="disabled" :type="nativeType">
+  <button 
+    ref="_ref" 
+    :class="[
+      'p-button',
+      `p-button--${type}`,
+      `p-button--${size}`,
+      { 'p-button--round': round },
+      { 'p-button--circle': circle },
+      { 'p-button--plain': plain }
+    ]" 
+    :disabled="disabled" 
+    :type="nativeType"
+  >
     <slot></slot>
   </button>
 </template>
@@ -21,13 +33,16 @@ const config = inject(CONFIG_PROVIDER_KEY, {
 })
 
 const props = withDefaults(defineProps<ButtonProps>(), {
-  type: 'primary',
+  type: 'default',
   disabled: false,
   size: 'medium',
   nativeType: 'button',
+  round: false,
+  circle: false,
+  plain: false,
 })
 
-const { type, disabled, nativeType } = toRefs(props)
+const { type, disabled, nativeType, round, circle, plain } = toRefs(props)
 
 const size = computed(() => {
   return config.size || props.size || 'medium'
@@ -46,5 +61,11 @@ defineExpose({
   size,
   /** @description native button type */
   nativeType,
+  /** @description whether the button is rounded */
+  round,
+  /** @description whether the button is circular */
+  circle,
+  /** @description whether the button is plain */
+  plain,
 })
 </script>

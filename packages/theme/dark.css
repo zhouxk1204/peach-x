@@ -1,64 +1,16 @@
 html.dark {
-  /* 主色调 - 桃子粉（暗色优化） */
-  --p-primary: #c46a96;
-  --p-primary-hover: #a9507c;
-  --p-primary-active: #8e3963;
-  --p-primary-bg: var(--p-primary);
-  --p-primary-text: #fff;
+  --p-base-text: #f0f0f0;
+  --p-base-bg: #121212;
+  --p-base-border: #333;
 
-  /* 背景 */
-  --p-bg: #1e1e1e;
-  --p-bg-muted: #2a2a2a;
-  --p-surface: #2c2c2c;
-  --p-surface-elevated: #3a3a3a;
+  /* 调整主色在暗色模式下的表现 */
+  --p-primary: color-mix(in srgb, var(--p-base-primary) 90%, white 10%);
+  --p-primary-hover: color-mix(in srgb, var(--p-primary) 80%, white 20%);
+  --p-primary-active: color-mix(in srgb, var(--p-primary) 80%, black 20%);
 
-  /* 文字 */
-  --p-text: #e5e5e5;
-  --p-text-muted: #a0a0a0;
+  /* 调整背景色 */
+  --p-bg-muted: color-mix(in srgb, var(--p-bg) 90%, var(--p-text) 10%);
 
-  /* 成功 */
-  --p-success: #16a34a;
-  --p-success-hover: #15803d;
-  --p-success-active: #116231;
-  --p-success-bg: var(--p-success);
-  --p-success-text: #fff;
-
-  /* 信息 */
-  --p-info: #3b82f6;
-  --p-info-hover: #2563eb;
-  --p-info-active: #1d4ed8;
-  --p-info-bg: var(--p-info);
-  --p-info-text: #fff;
-
-  /* 警告 */
-  --p-warning: #f59e0b;
-  --p-warning-hover: #d97706;
-  --p-warning-active: #b45309;
-  --p-warning-bg: var(--p-warning);
-  --p-warning-text: #fff;
-
-  /* 危险 */
-  --p-danger: #ef4444;
-  --p-danger-hover: #dc2626;
-  --p-danger-active: #b91c1c;
-  --p-danger-bg: var(--p-danger);
-  --p-danger-text: #fff;
-
-  /* 特定背景上的文字 */
-  --p-text-on-primary: #fff;
-  --p-text-on-success: #fff;
-  --p-text-on-info: #fff;
-  --p-text-on-warning: #fff;
-  --p-text-on-danger: #fff;
-
-  /* 禁用 */
-  --p-disabled-bg: #3c3c3c;
-  --p-disabled-text: #666;
-
-  /* 边框 */
-  --p-border-radius: 4px;
-  --p-border: 1px solid #333;
-
-  /* 阴影 */
-  --p-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  /* 调整边框颜色 */
+  --p-border: 1px solid color-mix(in srgb, var(--p-text) 25%, var(--p-bg) 75%);
 }

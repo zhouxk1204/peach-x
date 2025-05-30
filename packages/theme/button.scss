@@ -1,0 +1,93 @@
+@import "./default.css";
+
+$button-types: primary, success, info, warning, danger;
+$button-sizes: small, medium, large;
+
+/* Base Button Styles */
+.p-button {
+  --btn-bg: var(--p-primary-bg);
+  --btn-text: var(--p-primary-text);
+  
+  padding: var(--p-padding-medium);
+  border: none;
+  border-radius: var(--p-border-radius);
+  font-size: 14px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  transition: background-color 0.3s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+
+  /* Round variant */
+  &--round {
+    border-radius: var(--p-border-round-radius);
+  }
+
+  /* Default/outline variant */
+  &--default {
+    --btn-bg: transparent;
+    --btn-text: var(--p-text);
+    
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: var(--p-border);
+
+    &:hover:not([disabled]) {
+      --btn-bg: var(--p-primary);
+      color: var(--p-primary-text);
+    }
+    
+    &:active:not([disabled]) {
+      --btn-bg: var(--p-primary);
+    }
+  }
+
+  /* Type variants (primary, success, etc.) */
+  @each $type in $button-types {
+    &--#{$type} {
+      --btn-bg: var(--p-#{$type});
+      --btn-text: var(--p-#{$type}-text);
+      
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
+
+      &:hover:not([disabled]) {
+        --btn-bg: var(--p-#{$type}-hover);
+      }
+      
+      &:active:not([disabled]) {
+        --btn-bg: var(--p-#{$type}-active);
+      }
+
+      /* Plain variant for each type */
+      &--plain {
+        --btn-bg: transparent;
+        --btn-text: var(--p-#{$type});
+        
+        background-color: var(--btn-bg);
+        color: var(--btn-text);
+        border: 1px solid var(--p-#{$type});
+      }
+    }
+  }
+
+  /* Disabled state */
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+    filter: saturate(0.7);
+  }
+
+  /* Size variants */
+  @each $size in $button-sizes {
+    &--#{$size} {
+      padding: var(--p-padding-#{$size});
+      font-size: var(--p-font-size-#{$size});
+    }
+  }
+}
