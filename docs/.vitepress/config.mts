@@ -15,11 +15,12 @@ export default defineConfig({
       groupIconVitePlugin()
     ],
   },
-  title: "Peach X",
+  title: "Peach X: 轻量、现代、美观的 Vue 3 UI 组件库",
   description: "轻量、现代、美观的 Vue 3 UI 组件库",
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   themeConfig: {
     siteTitle: 'Peach X',
-    logo: '/logo.png',
+    logo: '/logo.avif',
     // 编辑链接
     editLink: {
       pattern: 'https://github.com/zhouxk1204/peach-x/tree/dev/docs/:path',

@@ -7,7 +7,7 @@ hero:
   text: "轻量、现代、美观的 Vue 3 UI 组件库"
   tagline: 让开发更简单，让界面更出色
   image:
-    src: /logo.png
+    src: /logo.avif
     alt: Peach X
   actions:
     - theme: brand
