@@ -2,15 +2,4 @@ html.dark {
   --p-base-text: #f0f0f0;
   --p-base-bg: #121212;
   --p-base-border: #333;
-
-  /* 调整主色在暗色模式下的表现 */
-  --p-primary: color-mix(in srgb, var(--p-base-primary) 90%, white 10%);
-  --p-primary-hover: color-mix(in srgb, var(--p-primary) 80%, white 20%);
-  --p-primary-active: color-mix(in srgb, var(--p-primary) 80%, black 20%);
-
-  /* 调整背景色 */
-  --p-bg-muted: color-mix(in srgb, var(--p-bg) 90%, var(--p-text) 10%);
-
-  /* 调整边框颜色 */
-  --p-border: 1px solid color-mix(in srgb, var(--p-text) 25%, var(--p-bg) 75%);
 }

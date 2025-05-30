@@ -15,35 +15,35 @@
   --p-primary-hover: color-mix(in srgb, var(--p-primary) 85%, white 15%);
   --p-primary-active: color-mix(in srgb, var(--p-primary) 85%, black 15%);
   --p-primary-bg: var(--p-primary);
-  --p-primary-text: color-contrast(var(--p-primary) vs white, black);
+  --p-primary-text: var(--p-base-primary);
 
   /* 成功色系 */
   --p-success: var(--p-base-success);
   --p-success-hover: color-mix(in srgb, var(--p-success) 85%, white 15%);
   --p-success-active: color-mix(in srgb, var(--p-success) 85%, black 15%);
   --p-success-bg: var(--p-success);
-  --p-success-text: color-contrast(var(--p-success) vs white, black);
+  --p-success-text: var(--p-base-success);
 
   /* 信息色系 */
   --p-info: var(--p-base-info);
   --p-info-hover: color-mix(in srgb, var(--p-info) 85%, white 15%);
   --p-info-active: color-mix(in srgb, var(--p-info) 85%, black 15%);
   --p-info-bg: var(--p-info);
-  --p-info-text: color-contrast(var(--p-info) vs white, black);
+  --p-info-text: var(--p-base-info);
 
   /* 警告色系 */
   --p-warning: var(--p-base-warning);
   --p-warning-hover: color-mix(in srgb, var(--p-warning) 85%, white 15%);
   --p-warning-active: color-mix(in srgb, var(--p-warning) 85%, black 15%);
   --p-warning-bg: var(--p-warning);
-  --p-warning-text: color-contrast(var(--p-warning) vs white, black);
+  --p-warning-text: var(--p-base-warning);
 
   /* 危险色系 */
   --p-danger: var(--p-base-danger);
   --p-danger-hover: color-mix(in srgb, var(--p-danger) 85%, white 15%);
   --p-danger-active: color-mix(in srgb, var(--p-danger) 85%, black 15%);
   --p-danger-bg: var(--p-danger);
-  --p-danger-text: color-contrast(var(--p-danger) vs white, black);
+  --p-danger-text: var(--p-base-danger);
 
   /* 背景色 */
   --p-bg: var(--p-base-bg);
@@ -54,11 +54,11 @@
   --p-text-muted: color-mix(in srgb, var(--p-text) 50%, var(--p-bg) 50%);
   
   /* 在特定背景下的文字颜色 */
-  --p-text-on-primary: color-contrast(var(--p-primary) vs white, black);
-  --p-text-on-success: color-contrast(var(--p-success) vs white, black);
-  --p-text-on-info: color-contrast(var(--p-info) vs white, black);
-  --p-text-on-warning: color-contrast(var(--p-warning) vs white, black);
-  --p-text-on-danger: color-contrast(var(--p-danger) vs white, black);
+  --p-text-on-primary: white;
+  --p-text-on-success:white;
+  --p-text-on-info: white;
+  --p-text-on-warning:white;
+  --p-text-on-danger: white;
   
   /* 禁用状态 */
   --p-disabled-bg: color-mix(in srgb, var(--p-bg) 60%, var(--p-text) 40%);
@@ -72,10 +72,13 @@
   /* 字体大小 */
   --p-font-size-small: 12px;
   --p-font-size-medium: 14px;
-  --p-font-size-large: 16px;
+  --p-font-size-large: 14px;
 
   /* 内边距 */
-  --p-padding-small: 4px 10px;
-  --p-padding-medium: 8px 16px;
-  --p-padding-large: 12px 20px;
+  --p-padding-h-small: 5px;
+  --p-padding-h-medium: 8px;
+  --p-padding-h-large: 12px;
+  --p-padding-v-small:  11px;
+  --p-padding-v-medium: 15px;
+  --p-padding-v-large: 19px;
 }

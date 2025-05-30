@@ -1,2 +1,7 @@
 @use './button.scss';
 @import './default.css';
+
+html {
+  background-color: var(--p-base-bg);
+  color: var(--p-base-text);
+}

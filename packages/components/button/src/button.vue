@@ -1,71 +1,75 @@
 <template>
+  <!-- Button component with dynamic classes and attributes -->
   <button 
     ref="_ref" 
-    :class="[
-      'p-button',
-      `p-button--${type}`,
-      `p-button--${size}`,
-      { 'p-button--round': round },
-      { 'p-button--circle': circle },
-      { 'p-button--plain': plain }
-    ]" 
+    :class="buttonClasses" 
     :disabled="disabled" 
     :type="nativeType"
   >
+    <!-- Loading indicator -->
+    <div class="p-icon--loading" v-if="loading"></div>
+    <!-- Default slot for button content -->
     <slot></slot>
   </button>
 </template>
 
 <script lang="ts" setup>
-import { inject, ref, toRefs } from 'vue'
+// Import required Vue composables and types
+import { inject, ref, computed } from 'vue'
 import { ButtonProps } from './types'
-import { CONFIG_PROVIDER_KEY } from '@peach-x/components/config-provider/src/context';
-import { computed } from 'vue';
+import { CONFIG_PROVIDER_KEY } from '@peach-x/components/config-provider/src/context'
 
+// Define component name
 defineOptions({
   name: 'PButton',
 })
 
+// Inject global configuration with default values
 const config = inject(CONFIG_PROVIDER_KEY, {
   size: 'medium',
   theme: 'light',
   locale: {}
 })
 
+// Define props with default values
 const props = withDefaults(defineProps<ButtonProps>(), {
-  type: 'default',
+  type: 'primary',
   disabled: false,
   size: 'medium',
   nativeType: 'button',
   round: false,
   circle: false,
   plain: false,
+  block: false,
+  loading: false,
 })
 
-const { type, disabled, nativeType, round, circle, plain } = toRefs(props)
+// Compute button classes based on props and config
+const buttonClasses = computed(() => [
+  'p-button',
+  `p-button--${props.type}`,
+  `p-button--${props.size || config.size || 'medium'}`,
+  { 
+    'p-button--round': props.round,
+    'p-button--circle': props.circle,
+    'p-button--plain': props.plain,
+    'p-button--block': props.block,
+    'p-button--loading-active': props.loading
+  }
+])
 
-const size = computed(() => {
-  return config.size || props.size || 'medium'
-})
-
+// Reference to the button element
 const _ref = ref<HTMLButtonElement | null>(null)
 
+// Expose public properties
 defineExpose({
   /** @description button html element */
   ref: _ref,
   /** @description button type */
-  type,
+  type: props.type,
   /** @description button disabled */
-  disabled,
-  /** @description button size */
-  size,
+  disabled: props.disabled,
   /** @description native button type */
-  nativeType,
-  /** @description whether the button is rounded */
-  round,
-  /** @description whether the button is circular */
-  circle,
-  /** @description whether the button is plain */
-  plain,
+  nativeType: props.nativeType,
 })
 </script>

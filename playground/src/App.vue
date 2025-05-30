@@ -1,13 +1,6 @@
-<!--
- * @Author: zhouxk
- * @Date: 2025-05-27 16:40:25
- * @LastEditors: zhouxk
- * @LastEditTime: 2025-05-30 13:38:44
- * @Description: 
--->
 <template>
   <div>
-    <PConfigProvider size="medium" theme="light">
+    <PConfigProvider>
       <div style="gap: 10px; display: flex;">
         <PButton @click="onclick" type="primary">Primary</PButton>
         <PButton @click="onclick" type="info">Info</PButton>
@@ -39,13 +32,76 @@
         <PButton @click="onclick" type="warning" disabled>Warning</PButton>
         <PButton @click="onclick" type="danger" disabled>Danger</PButton>
       </div>
+      <div>&nbsp;</div>
+      <div style="gap: 10px; display: flex;">
+        <PButton @click="onclick" type="primary" size="small">Primary</PButton>
+        <PButton @click="onclick" type="primary">Primary</PButton>
+        <PButton @click="onclick" type="primary" size="large">Primary</PButton>
+      </div>
+
+      <div>&nbsp;</div>
+      <div style="gap: 10px; display: flex;">
+        <PButton @click="onclick" type="primary" :loading="loading">Primary</PButton>
+      </div>
+
+      <button class="test-btn" :class="loading ? 'test-btn-loading' : ''">
+        <div class="loader" v-if="loading"></div> ABCDEF
+      </button>
     </PConfigProvider>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+
+const loading = ref(false);
 
 const onclick = () => {
-  console.log('PButton onclick');
+  loading.value = true;
+  setTimeout(() => {
+    loading.value = false;
+  }, 3000);
 }
 </script>
+
+<style>
+/* HTML:  */
+.loader {
+  position: absolute;
+  left: 10px;
+  width: 9px;
+  padding: 3px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #25b09b;
+  --_m:
+    conic-gradient(#0000 10%, #000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+
+.test-btn {
+  padding-left: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  transition: padding 0.4s ease;
+}
+
+.test-btn-loading {
+  padding-left: 30px;
+}
+</style>

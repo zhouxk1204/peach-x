@@ -1,58 +1,68 @@
 /**
- * 按钮类型枚举，定义了按钮的不同风格类型
+ * Button type variants
  */
-export type ButtonType = 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info';
+export type ButtonType = 'primary' | 'success' | 'warning' | 'danger' | 'info';
 
 /**
- * 按钮尺寸枚举，定义了按钮的不同大小规格
+ * Button size variants
  */
 export type ButtonSize = 'small' | 'medium' | 'large';
 
 /**
- * 原生按钮类型枚举，对应 HTML 原生按钮的 type 属性值
+ * Native button type attribute
  */
 export type ButtonNativeType = 'button' | 'submit' | 'reset';
 
 /**
- * 按钮组件的属性接口，定义了按钮组件可接受的所有属性
+ * Button component props
  */
 export interface ButtonProps {
   /**
-   * 按钮风格类型，不同类型对应不同的视觉样式
+   * Button type
    * @default 'primary'
    */
   type?: ButtonType;
 
   /**
-   * 是否禁用按钮，禁用状态下按钮不可点击
+   * Disable button state
    * @default false
    */
   disabled?: boolean;
 
   /**
-   * 按钮尺寸，不同尺寸对应不同的大小规格
+   * Button size
    * @default 'medium'
    */
   size?: ButtonSize;
 
   /**
-   * 原生按钮的 type 属性，用于控制按钮在表单中的行为
+   * Native button type
    * @default 'button'
    */
   nativeType?: ButtonNativeType;
 
   /**
-   * 是否为圆角按钮
+   * Apply rounded corners
    */
   round?: boolean;
 
   /**
-   * 是否为圆形按钮
+   * Apply circular shape
    */
   circle?: boolean;
 
   /**
-   * 是否为朴素按钮，朴素按钮通常具有较淡的背景和边框
+   * Apply plain style
    */
   plain?: boolean;
+
+  /**
+   * Make button full width
+   */
+  block?: boolean;
+
+  /**
+   * Show loading state
+   */
+  loading?: boolean;
 }
