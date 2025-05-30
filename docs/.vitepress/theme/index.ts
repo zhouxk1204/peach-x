@@ -1,6 +1,13 @@
 import 'virtual:group-icons.css'
-
-import Theme from 'vitepress/theme'
 import './custom.css'
+import '@vitepress-demo-preview/component/dist/style.css'
 
-export default Theme
+import { AntdTheme } from 'vite-plugin-vitepress-demo/theme'
+import Theme from 'vitepress/theme'
+
+export default {
+  ...Theme,
+  enhanceApp({ app }) {
+    app.component('Demo', AntdTheme)
+  }
+} 

@@ -1,6 +1,7 @@
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
 import { defineConfig } from "vitepress";
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lastUpdated: true,
@@ -12,7 +13,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
-      groupIconVitePlugin()
+      groupIconVitePlugin(),
     ],
   },
   title: "Peach X: 轻量、现代、美观的 Vue 3 UI 组件库",
