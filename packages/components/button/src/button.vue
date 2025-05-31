@@ -1,6 +1,7 @@
 <template>
   <!-- Button component with dynamic classes and attributes -->
   <button 
+   @click="handleClick"
     ref="_ref" 
     :class="buttonClasses" 
     :disabled="disabled" 
@@ -57,6 +58,16 @@ const buttonClasses = computed(() => [
     'p-button--loading-active': props.loading
   }
 ])
+
+// Handle the click event of the button.
+const handleClick = (e: any) => {
+  if (props.loading) {
+    e.preventDefault()
+    e.stopPropagation()
+    e.stopImmediatePropagation()
+    return false;
+  }
+}
 
 // Reference to the button element
 const _ref = ref<HTMLButtonElement | null>(null)

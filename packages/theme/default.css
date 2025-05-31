@@ -1,11 +1,11 @@
 /* default-theme.css */
 :root {
   /* 基础颜色定义 */
-  --p-base-primary: #8a2be2;
+  --p-base-primary: #c03797;
   --p-base-success: #22c55e;
   --p-base-info: #3b82f6;
   --p-base-warning: #f59e0b;
-  --p-base-danger: #ef4444;
+  --p-base-danger: #d03050;
   --p-base-text: #333;
   --p-base-bg: #ffffff;
   --p-base-border: #e0e0e0;
