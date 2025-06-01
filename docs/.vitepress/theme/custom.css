@@ -1,11 +1,17 @@
 :root {
+  --vp-c-brand-1: #c03797 !important;
+}
+
+body {
   --vp-c-bg-alt: #ffffff;
-  --vp-c-brand-1: #c03797
-  --vp-c-brand-2: #FF4FA2;
   --vp-button-brand-bg: #c03797;
-  --vp-button-brand-hover-bg: #FF4FA2;
+  --vp-button-brand-hover-bg: #ff8ac6;
   --vp-home-hero-image-filter: blur(88px);
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #f65854 50%,  #c03797 50%);
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #f65854 50%,
+    #c03797 50%
+  );
 }
 
 /* 隐藏所有自定义块的标题 */
@@ -13,14 +19,34 @@
   display: none;
 }
 
-.clip.name {
+.heading .clip.name {
   background: linear-gradient(120deg, #c03797 30%, #f65854);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.vp-block, .vp-doc .language-vue.vp-adaptive-theme {
+.vp-block,
+.vp-doc .language-vue.vp-adaptive-theme {
   margin: 0;
   border-radius: 0;
+}
+
+#components-demos-basic.code-box .code-box-demo{
+  padding: 14px 24px;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding: 10px 0;
+}
+
+button.p-button {
+  line-height: initial;
+}
+
+[role=button]:enabled, button:enabled.p-button--loading-active {
+  cursor: wait;
 }
