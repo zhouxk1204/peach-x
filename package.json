@@ -52,6 +52,8 @@
     "**/*.css"
   ],
   "scripts": {
+    "commit": "cz",
+    "prepare": "husky install",
     "docs:dev": "pnpm --filter @peach-x/docs docs:dev",
     "docs:build": "pnpm --filter @peach-x/docs docs:build",
     "play:dev": "pnpm --filter @peach-x/playground dev",
@@ -71,15 +73,30 @@
     "ui",
     "peach-x"
   ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "author": "zhouxk",
   "license": "MIT",
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@types/node": "^22.15.18",
     "@vitejs/plugin-vue": "^5.2.4",
     "autoprefixer": "^10.4.21",
+    "commitizen": "^4.3.1",
     "cssnano": "^7.0.7",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.27.0",
+    "husky": "^9.1.7",
     "postcss": "^8.5.3",
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.0",
