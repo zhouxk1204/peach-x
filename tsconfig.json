@@ -4,7 +4,7 @@
     "paths": {
       "@peach-x/*": ["packages/*"]
     },
-    "rootDir": "packages",
+    "rootDir": ".",
     "outDir": "dist",
     "declaration": true,
     "declarationDir": "dist",
@@ -20,5 +20,22 @@
     "skipLibCheck": true,
     "types": ["vue"]
   },
-  "include": ["packages", "env.d.ts", "global.d.ts", "postcss.config.js", "scripts/build-css.tss.tsscripts/build-css.tsd-css.ts"]
+  "include": [
+    "packages/**/*",
+    "docs/**/*.ts",
+    "docs/**/*.vue",
+    "docs/.vitepress/*/*.ts",
+    "playground/**/*",
+    "scripts/**/*",
+    "vite.config.ts",
+    "env.d.ts",
+    "global.d.ts",
+    "**/*.vue"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "playground/src/components.d.ts",
+    "playground/auto-import.d.ts"
+  ]
 }
