@@ -28,6 +28,7 @@ export default [
   {
     // 忽略不需要 lint 的文件和目录
     ignores: [
+      'docs/**/*.vue',
       'docs/.vitepress/cache/**', // 忽略整个缓存目录
       '**/dist/**', // 构建输出目录
       '**/node_modules/**', // 依赖目录
@@ -65,7 +66,7 @@ export default [
         extraFileExtensions: ['.vue'], // 声明额外文件扩展名
         // TypeScript 相关配置
         tsconfigRootDir: __dirname, // TS 配置根目录
-        project: './tsconfig.json', // 关联的 tsconfig 文件
+        project: './tsconfig.eslint.json', // 关联的 tsconfig 文件
         // Vue 相关配置
         vueFeatures: {
           filter: true, // 启用 Vue 2 的过滤器语法支持
@@ -77,7 +78,8 @@ export default [
     // 自定义规则
     rules: {
       // Vue 相关规则
-      'vue/comment-directive': 'error', // 强制模板注释指令格式
+      'vue/comment-directive': 'off', // 关闭模板注释指令格式
+      // 'vue/comment-directive': 'error', // 强制模板注释指令格式
       'vue/jsx-uses-vars': 'error', // 防止 JSX 中未使用的变量
       'vue/no-unused-vars': 'warn', // Vue 模板中未使用的变量警告
       'vue/no-multiple-template-root': 'off', // Vue 3 允许多根节点

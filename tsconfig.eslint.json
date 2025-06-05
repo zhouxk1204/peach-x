@@ -1,0 +1,13 @@
+{
+    "extends": "./tsconfig.json",
+    "include": [
+      "packages/**/*.ts",
+      "packages/**/*.vue",
+      "docs/**/*.ts",
+      "docs/**/*.vue",
+      "playground/**/*.ts",
+      "playground/**/*.vue",
+      "env.d.ts"
+    ]
+  }
+  
