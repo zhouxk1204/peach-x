@@ -20,18 +20,7 @@
     "skipLibCheck": true,
     "types": ["vue"]
   },
-  "include": [
-    "packages/**/*",
-    "docs/**/*.ts",
-    "docs/**/*.vue",
-    "docs/.vitepress/*/*.ts",
-    "playground/**/*",
-    "scripts/**/*",
-    "vite.config.ts",
-    "env.d.ts",
-    "global.d.ts",
-    "**/*.vue"
-  ],
+  "include": ["packages", "env.d.ts", "postcss.config.js", "scripts/build-css.ts"],
   "exclude": [
     "node_modules",
     "dist",
