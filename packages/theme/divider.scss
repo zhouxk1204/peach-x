@@ -1,0 +1,61 @@
+@import "./default.css";
+
+$divider-sizes: small, medium, large;
+.p-divider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 16px 0;
+  width: 100%;
+  background-color: var(--p-base-bg);
+  color: var(--p-base-text);
+
+  &__line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--p-base-border);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    white-space: nowrap;
+    background-color: var(--p-base-bg);
+    color: var(--p-base-text);
+
+    @each $size in $divider-sizes {
+      &--#{$size} {
+        padding: 0 var(--p-padding-h-#{$size});
+        font-size: var(--p-font-size-#{$size});
+      }
+    }
+  }
+
+  /* 位置样式 */
+  &--left {
+    justify-content: flex-start;
+
+    .p-divider__content {
+      padding-left: 0;
+      padding-right: var(--p-padding-h-medium);
+    }
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--right {
+    justify-content: flex-end;
+
+    .p-divider__content {
+      padding-left: var(--p-padding-h-medium);
+      padding-right: 0;
+    }
+  }
+}
