@@ -72,13 +72,13 @@
   /* 字体大小 */
   --p-font-size-small: 12px;
   --p-font-size-medium: 14px;
-  --p-font-size-large: 14px;
+  --p-font-size-large: 16px;
 
   /* 内边距 */
-  --p-padding-h-small: 5px;
-  --p-padding-h-medium: 8px;
-  --p-padding-h-large: 12px;
-  --p-padding-v-small:  11px;
-  --p-padding-v-medium: 15px;
-  --p-padding-v-large: 19px;
+  --p-padding-v-small: 5px;
+  --p-padding-v-medium: 8px;
+  --p-padding-v-large: 12px;
+  --p-padding-h-small:  11px;
+  --p-padding-h-medium: 15px;
+  --p-padding-h-large: 19px;
 }
