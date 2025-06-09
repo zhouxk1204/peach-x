@@ -1,14 +1,12 @@
 # Divider 分割线
 分割线将内容分隔开，形成清晰的层次结构。
-## 何时使用
-- 对不同章节的内容进行分割。
-- 对重点内容与次要内容进行分割。
 
 ## 基础使用
-默认居中、实线、1px 高度的分割线。
+对不同章节的内容进行分割。
+<demo src="./demos/divider-base.vue"></demo>
 
-## 分割线的类型
-可以通过 `type` 来设置分割线的类型，支持 `solid`、`dashed`、`dotted` 和 `double`。
+## 分割线的样式
+<demo src="./demos/divider-type.vue"></demo>
 
 ## 设置分割线的粗细
 可以通过 `height` 来设置分割线的高度，支持 `string` 和 `number` 类型。如果是string类型，目前只支持 `px` 单位。
