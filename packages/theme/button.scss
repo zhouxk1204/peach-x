@@ -88,13 +88,14 @@ $button-sizes: small, medium, large;
   // 按钮尺寸循环
   @each $size in $button-sizes {
     &--#{$size} {
-      padding: var(--p-padding-h-#{$size}) var(--p-padding-v-#{$size});
+      padding: var(--p-padding-v-#{$size}) var(--p-padding-h-#{$size});
       font-size: var(--p-font-size-#{$size});
     }
   }
 
   // 加载图标样式
   .p-icon--loading {
+    box-sizing: content-box;
     position: relative;
     width: 10px;
     aspect-ratio: 1;
