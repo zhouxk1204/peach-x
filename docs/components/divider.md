@@ -1,32 +1,30 @@
 # Divider 分割线
-分割线将内容分隔开，形成清晰的层次结构。
+Divider（分割线）是UI设计中的基础视觉元素，主要用于在界面中建立清晰的内容边界和层次结构。
 
 ## 基础使用
-对不同章节的内容进行分割。
 <demo src="./demos/divider-base.vue"></demo>
 
 ## 分割线的样式
 <demo src="./demos/divider-type.vue"></demo>
 
 ## 设置分割线的粗细
-可以通过 `height` 来设置分割线的高度，支持 `string` 和 `number` 类型。如果是string类型，目前只支持 `px` 单位。
+<demo src="./demos/divider-height.vue"></demo>
 
 ## 设置分割线的颜色
-可以通过 `color` 来设置分割线的颜色，支持 `string` 类型。
+<demo src="./demos/divider-color.vue"></demo>
 
 ## 设置分割线标题
-可以设置分割线的标题，标题的位置和标题的背景色和样式
-可以通过 `placement`、`contentBgColor` 和 `textColor` 来控制。
+<demo src="./demos/divider-title.vue"></demo>
 
 ## Divider API
 `Divider Props`
 
 | 属性名 | 说明 | 类型 | 默认值 |
 |:-------|:------------:|:------:|:-------:|
-| size | 文字尺寸 | `small` \| `medium` \| `large` | `medium` |
-| type | 分割线类型 | `solid` \| `dashed` \| `dotted` \| `double` | `solid` |
-| placement | 是否朴素按钮 | `left` \| `center` \| `right` | `center` |
-| color | 分割线颜色 | `string` | `#e0e0e0` |
-| height | 分割线的高度 | `string` \| `number` | `1px` |
-| contentBgColor | 分割线内容背景色 | `string`  | `#ffffff`（暗黑模式为`#121212`) |
-| textColor | 分割线内容颜色 | `string`  | `#333`（暗黑模式为`#f0f0f0`) |
+| `size` | 分割线文字边距尺寸 | `small` \| `medium` \| `large` | `medium` |
+| `type` | 分割线类型 | `solid` \| `dashed` \| `dotted` \| `double` | `solid` |
+| `placement` | 是否朴素按钮 | `left` \| `center` \| `right` | `center` |
+| `color` | 分割线颜色 | `string` | `#e0e0e0` |
+| `height` | 分割线的高度 | `string` \| `number` | `1px` |
+| `contentBgColor` | 分割线内容背景色 | `string`  | `#fff` / `#121212` |
+| `textColor` | 分割线内容颜色 | `string`  | `#333` / `#f0f0f0` |

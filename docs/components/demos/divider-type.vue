@@ -13,7 +13,8 @@
     </p>
     <PDivider />
     <p>
-      It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.
+      It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a
+      wife.
     </p>
     <PDivider type="dashed" />
     <p>
