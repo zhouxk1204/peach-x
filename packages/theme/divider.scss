@@ -1,15 +1,15 @@
 @import "./default.css";
 
+// Define divider size variants
 $divider-sizes: small, medium, large;
+
+// Base divider styles
 .p-divider {
-  display: flex;
-  align-items: center;
   position: relative;
-  margin: 16px 0;
-  width: 100%;
   background-color: var(--p-base-bg);
   color: var(--p-base-text);
 
+  // Divider line styles
   &__line {
     position: absolute;
     left: 0;
@@ -20,26 +20,52 @@ $divider-sizes: small, medium, large;
     color: var(--p-base-border);
   }
 
+  // Divider content styles
   &__content {
     position: relative;
     z-index: 1;
-
     white-space: nowrap;
     background-color: var(--p-base-bg);
     color: var(--p-base-text);
+  }
 
-    @each $size in $divider-sizes {
-      &--#{$size} {
-        padding: 0 var(--p-padding-h-#{$size});
-        font-size: var(--p-font-size-#{$size});
+  // Size variants for horizontal and vertical dividers
+  @each $size in $divider-sizes {
+    &--#{$size} {
+      // Horizontal divider size variants
+      &.p-divider--horizontal {
+        margin: var(--p-padding-v-#{$size}) 0;
+        .p-divider__content {
+          padding: 0 var(--p-padding-h-#{$size});
+          font-size: var(--p-font-size-#{$size});
+        }
+      }
+
+      // Vertical divider size variants
+      &.p-divider--vertical {
+        margin: 0 var(--p-margin-h-#{$size});
       }
     }
   }
 
-  /* 位置样式 */
+  // Vertical divider specific styles
+  &--vertical {
+    display: inline-block;
+    vertical-align: middle;
+    height: 0.8em;
+    margin-top: -0.2em;
+  }
+
+  // Horizontal divider specific styles
+  &--horizontal {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  // Position variants
   &--left {
     justify-content: flex-start;
-
     .p-divider__content {
       padding-left: 0;
       padding-right: var(--p-padding-h-medium);
@@ -52,7 +78,6 @@ $divider-sizes: small, medium, large;
 
   &--right {
     justify-content: flex-end;
-
     .p-divider__content {
       padding-left: var(--p-padding-h-medium);
       padding-right: 0;

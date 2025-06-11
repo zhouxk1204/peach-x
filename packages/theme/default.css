@@ -81,4 +81,12 @@
   --p-padding-h-small:  11px;
   --p-padding-h-medium: 15px;
   --p-padding-h-large: 19px;
+
+  /* 外边距 */
+  --p-margin-v-small: 5px;
+  --p-margin-v-medium: 8px;
+  --p-margin-v-large: 12px;
+  --p-margin-h-small:  4px;
+  --p-margin-h-medium: 8px;
+  --p-margin-h-large: 12px;
 }
