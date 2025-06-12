@@ -112,8 +112,8 @@ const dividerStyle = computed(() => {
     const heightValue = getHeightValue();
     if (props.type === 'double') {
       return {
-        borderLeft: `${heightValue} double ${props.color}`,
-        borderRight: `${heightValue} double ${props.color}`,
+        borderLeft: `${heightValue} solid ${props.color}`,
+        borderRight: `${heightValue} solid ${props.color}`,
         width: `calc(${heightValue} * 2)`,
       };
     }
@@ -132,8 +132,8 @@ const lineStyle = computed(() => {
   const heightValue = getHeightValue();
 
   if (props.type === 'double') {
-    style.borderTop = `${heightValue} double ${props.color}`;
-    style.borderBottom = `${heightValue} double ${props.color}`;
+    style.borderTop = `${heightValue} solid ${props.color}`;
+    style.borderBottom = `${heightValue} solid ${props.color}`;
     style.height = `calc(${heightValue} * 2)`;
   } else {
     style.borderTop = `${heightValue} ${props.type} ${props.color}`;
