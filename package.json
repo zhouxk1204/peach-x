@@ -1,6 +1,6 @@
 {
   "name": "peach-x",
-  "version": "1.0.15",
+  "version": "1.0.19",
   "description": "A Simple, Fast Vue 3 Component Library built with TypeScript",
   "type": "module",
   "main": "./dist/lib/index.cjs",

@@ -1,3 +1,6 @@
+<p align="center">
+  <img width="300px" src="./docs/public/logo.avif">
+</p>
 <h1 align="center">Peach X</h1>
 <p align="center">
   <a href="https://github.com/zhouxk1204/peach-x">
