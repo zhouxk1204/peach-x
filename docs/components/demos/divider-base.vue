@@ -4,9 +4,11 @@
 <template>
   <div>
     <p>
-      I am no bird; and no net ensnares me: I am a free human being with an independent will.
+      I am no bird;
+      and no net ensnares me:
+      I am a free human being with an independent will.
     </p>
-    <PDivider />
+    <p-divider />
     <p>
       But man is not made for defeat. A man can be destroyed but not defeated.
     </p>

@@ -6,8 +6,8 @@ title: 使用方法
 </docs>
 <template>
   <div class="row">
-    <PButton size="small">Small</PButton>
-    <PButton size="medium">Medium</PButton>
-    <PButton size="large">Large</PButton>
+    <p-button size="small">Small</p-button>
+    <p-button size="medium">Medium</p-button>
+    <p-button size="large">Large</p-button>
   </div>
 </template>

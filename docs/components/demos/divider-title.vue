@@ -13,15 +13,20 @@
     <p>
       The only way to do great work is to love what you do.
     </p>
-    <PDivider placement="left">Left Title</PDivider>
+    <p-divider placement="left">Left Title</p-divider>
     <p>
       Be yourself; everyone else is already taken.
     </p>
-    <PDivider contentBgColor="#E5D0FF">🌟</PDivider>
+    <p-divider contentBgColor="#E5D0FF">🌟</p-divider>
     <p>
-      Success is not final, failure is not fatal: It is the courage to continue that counts.
+      Success is not final, failure is not fatal: 
+      It is the courage to continue that counts.
     </p>
-    <PDivider placement="right" textColor="#c03797" contentBgColor="#ccc">Right Title</PDivider>
+    <p-divider 
+      placement="right"
+      textColor="#c03797"
+      contentBgColor="#ccc">Right Title
+    </p-divider>
     <p>
       Happiness is not something ready-made. It comes from your own actions.
     </p>

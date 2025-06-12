@@ -18,7 +18,7 @@
     "vitepress": "^1.6.3"
   },
   "dependencies": {
-    "peach-x": "1.0.17",
+    "peach-x": "1.0.19",
     "vitepress-plugin-group-icons": "^1.5.5"
   }
 }

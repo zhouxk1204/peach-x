@@ -6,7 +6,10 @@ title: 使用方法
 </docs>
 <template>
   <div class="row">
-    <PButton :loading="loading" @click="handleClick">{{ loading ? '加载中...' : '点我' }}</PButton>
+    <p-button 
+      :loading="loading" 
+      @click="handleClick">{{ loading ? '加载中...' : '点我' }}
+    </p-button>
   </div>
 </template>
 <script setup lang="ts">
@@ -15,6 +18,7 @@ const loading = ref(false);
 
 const handleClick = () => {
   loading.value = true;
+  // 模拟耗时操作
   setTimeout(() => {
     loading.value = false;
   }, 3000);

@@ -1,23 +1,38 @@
 # Divider 分割线
 Divider（分割线）是UI设计中的基础视觉元素，主要用于在界面中建立清晰的内容边界和层次结构。
 
-## 基础使用
+## 代码演示
+### 基础使用  
+<p></p>
+
 <demo src="./demos/divider-base.vue"></demo>
 
-## 分割线的样式
+### 设置分割线样式
+<p></p>
+
 <demo src="./demos/divider-type.vue"></demo>
 
-## 设置分割线的粗细
+### 设置分割线粗细
+<p></p>
+
 <demo src="./demos/divider-height.vue"></demo>
 
-## 设置分割线的颜色
+### 设置颜色
+<p></p>
+
 <demo src="./demos/divider-color.vue"></demo>
 
-## 设置分割线标题
+### 设置分割线文案
+<p></p>
+
 <demo src="./demos/divider-title.vue"></demo>
 
-## Divider API
-`Divider Props`
+### 使用垂直分隔线
+垂直分割线用于在视觉上分隔内容，通常用于菜单、列表、布局等场景。
+<demo src="./demos/divider-direction.vue"></demo>
+
+## API
+### 属性
 
 | 属性名 | 说明 | 类型 | 默认值 |
 |:-------|:------------:|:------:|:-------:|
@@ -28,3 +43,9 @@ Divider（分割线）是UI设计中的基础视觉元素，主要用于在界�
 | `height` | 分割线的高度 | `string` \| `number` | `1px` |
 | `contentBgColor` | 分割线内容背景色 | `string`  | `#fff` / `#121212` |
 | `textColor` | 分割线内容颜色 | `string`  | `#333` / `#f0f0f0` |
+| `direction` | 分割线方向 | `vertical` \| `horizontal`  | `horizontal` |
+
+### 插槽
+| 插槽名 | 说明 |
+|:-------|:------------:|
+| `default` | 设置分割线的文案内容 | 

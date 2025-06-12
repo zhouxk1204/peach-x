@@ -10,24 +10,24 @@ title: 使用方法
 </docs>
 <template>
   <div class="row">
-    <PButton type="primary">Primary</PButton>
-    <PButton type="info">Info</PButton>
-    <PButton type="success">Success</PButton>
-    <PButton type="warning">Warning</PButton>
-    <PButton type="danger">Danger</PButton>
+    <p-button type="primary">Primary</p-button>
+    <p-button type="info">Info</p-button>
+    <p-button type="success">Success</p-button>
+    <p-button type="warning">Warning</p-button>
+    <p-button type="danger">Danger</p-button>
   </div>
   <div class="row">
-    <PButton type="primary" plain>Primary</PButton>
-    <PButton type="info" plain>Info</PButton>
-    <PButton type="success" plain>Success</PButton>
-    <PButton type="warning" plain>Warning</PButton>
-    <PButton type="danger" plain>Danger</PButton>
+    <p-button type="primary" plain>Primary</p-button>
+    <p-button type="info" plain>Info</p-button>
+    <p-button type="success" plain>Success</p-button>
+    <p-button type="warning" plain>Warning</p-button>
+    <p-button type="danger" plain>Danger</p-button>
   </div>
   <div class="row">
-    <PButton type="primary" round>Primary</PButton>
-    <PButton type="info" round>Info</PButton>
-    <PButton type="success" round>Success</PButton>
-    <PButton type="warning" round>Warning</PButton>
-    <PButton type="danger" round>Danger</PButton>
+    <p-button type="primary" round>Primary</p-button>
+    <p-button type="info" round>Info</p-button>
+    <p-button type="success" round>Success</p-button>
+    <p-button type="warning" round>Warning</p-button>
+    <p-button type="danger" round>Danger</p-button>
   </div>
 </template>

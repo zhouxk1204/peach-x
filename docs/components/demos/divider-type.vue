@@ -9,24 +9,28 @@
 <template>
   <div>
     <p>
-      Until I feared I would lose it, I never loved to read. One does not love breathing.
+      Until I feared I would lose it, I never loved to read.
+      One does not love breathing.
     </p>
-    <PDivider />
+    <p-divider />
     <p>
-      It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a
+      It is a truth universally acknowledged,
+      that a single man in possession of a good fortune, must be in want of a
       wife.
     </p>
-    <PDivider type="dashed" />
+    <p-divider type="dashed" />
     <p>
-      Call me Ishmael. Some years ago—never mind how long precisely—I thought I would sail about a little.
+      Call me Ishmael. Some years ago—never mind how long
+       precisely—I thought I would sail about a little.
     </p>
-    <PDivider type="dotted" />
+    <p-divider type="dotted" />
     <p>
       It was a bright cold day in April, and the clocks were striking thirteen.
     </p>
-    <PDivider type="double" />
+    <p-divider type="double" />
     <p>
-      So we beat on, boats against the current, borne back ceaselessly into the past.
+      So we beat on, boats against the current,
+      borne back ceaselessly into the past.
     </p>
   </div>
 </template>
