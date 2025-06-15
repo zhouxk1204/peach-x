@@ -1,0 +1,19 @@
+@import "./default.css";
+
+.p-ticker {
+  font-variant-numeric: tabular-nums;
+  font-family: v-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  display: inline-block;
+  text-align: right;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--p-base-text);
+
+  $sizes: small, medium, large;
+  @each $size in $sizes {
+    &.p-ticker--#{$size} {
+      font-size: var(--p-font-size-#{$size});
+    }
+  }
+}

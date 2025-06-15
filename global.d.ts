@@ -11,5 +11,6 @@ declare module 'vue' {
     PButton: typeof import('peach-x/components/button')['PButton']
     PConfigProvider: typeof import('peach-x/components/config-provider')['PConfigProvider']
     PDivider: typeof import('peach-x/components/divider')['PDivider']
+    PTicker: typeof import('peach-x/components/ticker')['PTicker']
   }
 }
