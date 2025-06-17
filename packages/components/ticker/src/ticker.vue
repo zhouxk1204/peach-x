@@ -11,6 +11,7 @@ import { CONFIG_PROVIDER_KEY } from '@peach-x/components/config-provider';
 import { ref, computed, toRefs, onMounted, inject } from 'vue';
 import { TickerEmits, TickerExposes, TickerProps } from './types';
 import { tween } from './utils';
+import { CSS_UNIT_REGEX_STRICT, THOUSANDS_SEPARATOR_REGEX } from './constants';
 
 // Component configuration
 // Sets the component name for dev tools and recursive references
@@ -70,7 +71,7 @@ const tickerStyle = computed(() => {
 
   // Adjust count if separator is present
   if (separator.value.length > 0) {
-    const formatted = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, separator.value);
+    const formatted = intPart.replace(THOUSANDS_SEPARATOR_REGEX, separator.value);
     const separatorCount = (formatted.match(new RegExp(separator.value, 'g')) || []).length / 2;
     digitCount += separatorCount;
   }
@@ -84,7 +85,7 @@ const tickerStyle = computed(() => {
   let fontSize = '';
   if (typeof tickerSize.value === 'number') {
     fontSize = tickerSize.value + 'px';
-  } else if (typeof tickerSize.value === 'string' && /^\d+(px|rem|em|%)$/.test(tickerSize.value)) {
+  } else if (typeof tickerSize.value === 'string' && CSS_UNIT_REGEX_STRICT.test(tickerSize.value)) {
     fontSize = tickerSize.value;
   }
 
@@ -112,7 +113,7 @@ const formattedValue = computed(() => {
   // Apply thousands separator if needed
   if (currentValue.value >= 1000 && separator.value.length > 0) {
     const parts = val.split('.');
-    const integerPart = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, separator.value);
+    const integerPart = parts[0].replace(THOUSANDS_SEPARATOR_REGEX, separator.value);
     const decimalPart = parts[1] ? `.${parts[1]}` : '';
     return `${integerPart}${decimalPart}`;
   }
