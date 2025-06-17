@@ -48,37 +48,37 @@
   /* 背景色 */
   --p-bg: var(--p-base-bg);
   --p-bg-muted: color-mix(in srgb, var(--p-bg) 90%, var(--p-base-text) 10%);
-  
+
   /* 文本颜色 */
   --p-text: var(--p-base-text);
   --p-text-muted: color-mix(in srgb, var(--p-text) 50%, var(--p-bg) 50%);
-  
+
   /* 在特定背景下的文字颜色 */
   --p-text-on-primary: white;
-  --p-text-on-success:white;
+  --p-text-on-success: white;
   --p-text-on-info: white;
-  --p-text-on-warning:white;
+  --p-text-on-warning: white;
   --p-text-on-danger: white;
-  
+
   /* 禁用状态 */
   --p-disabled-bg: color-mix(in srgb, var(--p-bg) 60%, var(--p-text) 40%);
   --p-disabled-text: color-mix(in srgb, var(--p-text) 60%, var(--p-bg) 40%);
-  
+
   /* 边框 */
   --p-border-radius: 4px;
   --p-border-round-radius: 20px;
   --p-border: 1px solid color-mix(in srgb, var(--p-text) 15%, var(--p-bg) 85%);
 
   /* 字体大小 */
-  --p-font-size-small: 12px;
-  --p-font-size-medium: 14px;
-  --p-font-size-large: 16px;
+  --p-font-size-small: 14px;
+  --p-font-size-medium: 16px;
+  --p-font-size-large: 18px;
 
   /* 内边距 */
   --p-padding-v-small: 5px;
   --p-padding-v-medium: 8px;
   --p-padding-v-large: 12px;
-  --p-padding-h-small:  11px;
+  --p-padding-h-small: 11px;
   --p-padding-h-medium: 15px;
   --p-padding-h-large: 19px;
 
@@ -86,7 +86,7 @@
   --p-margin-v-small: 5px;
   --p-margin-v-medium: 8px;
   --p-margin-v-large: 12px;
-  --p-margin-h-small:  4px;
+  --p-margin-h-small: 4px;
   --p-margin-h-medium: 8px;
   --p-margin-h-large: 12px;
 }
