@@ -23,6 +23,7 @@ export default [
   {
     ignores: [
       'docs/**/*.vue',
+      'docs/**/*.ts',
       'docs/.vitepress/cache/**',
       '**/dist/**',
       '**/node_modules/**',
