@@ -7,10 +7,9 @@
 </template>
 
 <script setup lang="ts">
-// Import dependencies
 import { CONFIG_PROVIDER_KEY } from '@peach-x/components/config-provider';
 import { ref, computed, toRefs, onMounted, inject } from 'vue';
-import { TickerInstance, TickerProps } from './types';
+import { TickerEmits, TickerExposes, TickerProps } from './types';
 import { tween } from './utils';
 
 // Component configuration
@@ -36,7 +35,6 @@ const isAnimating = ref(false);
 // Component props with TypeScript interface and defaults
 const props = withDefaults(defineProps<TickerProps>(), {
   from: 0, // Starting value (default 0)
-  duration: 2000, // Animation duration in ms (default 2s)
   precision: 0, // Decimal places (default 0)
   separator: '', // Thousands separator (default none)
   autoplay: true, // Auto-start animation (default true)
@@ -104,10 +102,7 @@ onMounted(() => {
 });
 
 // Component events definition
-const emits = defineEmits<{
-  // Emitted when animation completes
-  (e: 'finish'): void;
-}>();
+const emits = defineEmits<TickerEmits>();
 
 // Computed formatted display value with separators and decimals
 const formattedValue = computed(() => {
@@ -155,7 +150,7 @@ const startAnimation = () => {
 
 // Expose public component API
 // These methods can be called via component ref
-defineExpose<TickerInstance>({
+defineExpose<TickerExposes>({
   /** @description Reference to the root HTML element */
   ref: _ref,
   /** @description Method to manually start the animation */

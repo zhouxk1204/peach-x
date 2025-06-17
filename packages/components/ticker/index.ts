@@ -6,4 +6,6 @@ export const PTicker: SFCWithInstall<typeof Ticker> = withInstall(Ticker);
 
 export type PTickerInstance = InstanceType<typeof PTicker>;
 
+export * from './src/types';
+
 export default PTicker;

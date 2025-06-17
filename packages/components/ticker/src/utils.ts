@@ -75,24 +75,26 @@ export const getDuration = (value: number, baseDuration = 2000): number => {
 export const tween = (data: {
   from: number;
   to: number;
-  duration: number;
+  duration?: number;
   onUpdate: (value: number) => void;
   onFinish: () => void;
 }) => {
   const { from, to, duration, onUpdate, onFinish } = data;
   const startTime = performance.now();
 
+  const dynamicDuration = duration || getDuration(Math.abs(to - from));
+
   const animate = () => {
     const current = performance.now();
-    const elapsedTime = Math.min(current - startTime, duration);
+    const elapsedTime = Math.min(current - startTime, dynamicDuration);
 
-    if (elapsedTime === duration) {
+    if (elapsedTime === dynamicDuration) {
       onFinish();
       return;
     }
 
     const easingFunction = getEasingFunction(from, to);
-    const value = from + (to - from) * easingFunction(elapsedTime / duration);
+    const value = from + (to - from) * easingFunction(elapsedTime / dynamicDuration);
     onUpdate(value);
     requestAnimationFrame(animate);
   };

@@ -26,7 +26,7 @@ export interface TickerEmits {
   (e: 'finish'): void;
 }
 
-export interface TickerInstance {
+export interface TickerExposes {
   /** Reference to the ticker element */
   ref: Ref<HTMLSpanElement | undefined, HTMLSpanElement | undefined>;
   /** Starts the ticker animation */
