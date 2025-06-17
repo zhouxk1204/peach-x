@@ -1,6 +1,6 @@
-import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
 
-import { defineConfig } from "vitepress";
+import { defineConfig } from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -8,16 +8,14 @@ export default defineConfig({
   lang: 'zh-CN',
   markdown: {
     config(md) {
-      md.use(groupIconMdPlugin)
-    },
+      md.use(groupIconMdPlugin);
+    }
   },
   vite: {
-    plugins: [
-      groupIconVitePlugin(),
-    ],
+    plugins: [groupIconVitePlugin()]
   },
-  title: "Peach X: 轻量、现代、美观的 Vue 3 UI 组件库",
-  description: "轻量、现代、美观的 Vue 3 UI 组件库",
+  title: 'Peach X: 轻量、现代、美观的 Vue 3 UI 组件库',
+  description: '轻量、现代、美观的 Vue 3 UI 组件库',
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   themeConfig: {
     siteTitle: 'Peach X',
@@ -46,45 +44,48 @@ export default defineConfig({
       provider: 'local'
     },
     nav: [
-      { text: "首页", link: "/" },
-      { text: "指南", link: "/guides/" },
-      { text: "组件", link: "/components/button" },
+      { text: '首页', link: '/' },
+      { text: '指南', link: '/guides/' },
+      { text: '组件', link: '/components/button' }
     ],
 
     sidebar: {
-      "/guides/": [
+      '/guides/': [
         {
-          text: "介绍",
-          items: [
-            { text: "Peach X", link: "/guides/" },
-          ],
+          text: '介绍',
+          items: [{ text: 'Peach X', link: '/guides/' }]
         },
         {
-          text: "基础",
+          text: '基础',
           items: [
-            { text: "安装", link: "/guides/installation" },
-            { text: "快速开始", link: "/guides/quickstart" },
-            // { text: "主题", link: "/guides/theme" },
-            { text: "暗黑模式", link: "/guides/dark-mode" },
-          ],
-        },
+            { text: '安装', link: '/guides/installation' },
+            { text: '快速开始', link: '/guides/quickstart' },
+            { text: '暗黑模式', link: '/guides/dark-mode' }
+          ]
+        }
       ],
 
-      "/components/": [
+      '/components/': [
         {
-          text: "基础组件",
-          items: [{ text: "Button 按钮", link: "/components/button" },
-            { text: "Divider 分割线", link: "/components/divider" }
-          ],
-        },
-      ],
+          text: '基础组件',
+          items: [
+            { text: 'Button 按钮', link: '/components/button' },
+            { text: 'Divider 分割线', link: '/components/divider' },
+            { text: 'Ticker 数值动画', link: '/components/ticker' }
+          ]
+        }
+      ]
     },
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/zhouxk1204/peach-x", ariaLabel: "GitHub" },
-      { icon: {
+      { icon: 'github', link: 'https://github.com/zhouxk1204/peach-x', ariaLabel: 'GitHub' },
+      {
+        icon: {
           svg: `<svg t="1741408990097" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1514" width="200" height="200"><path d="M64 960V128h832v832z" fill="#CB3837" p-id="1515"></path><path d="M192 320h576v512h-128V448H448v384H192z" fill="#FFFFFF" p-id="1516"></path></svg>`
-        }, link: "https://www.npmjs.com/package/peach-x", ariaLabel: "npm" },
-    ],
-  },
+        },
+        link: 'https://www.npmjs.com/package/peach-x',
+        ariaLabel: 'npm'
+      }
+    ]
+  }
 });
