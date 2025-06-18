@@ -1,8 +1,13 @@
 {
   "name": "peach-x",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "A Simple, Fast Vue 3 Component Library built with TypeScript",
   "type": "module",
+  "workspaces": [
+    "docs",
+    "packages/*",
+    "playground"
+  ],
   "main": "./dist/lib/index.cjs",
   "module": "./dist/es/index.mjs",
   "types": "./dist/types/index.d.ts",
@@ -69,9 +74,9 @@
     "version:major": "npm version major --no-git-tag-version",
     "prepublish": "pnpm run changelog && pnpm run build && pnpm run gen:dts",
     "release": "pnpm run prepublish && pnpm publish --no-git-checks",
-    "release:patch": "version:patch && pnpm run prepublish && pnpm publish --no-git-checks",
-    "release:minor": "version:minor && pnpm run prepublish && pnpm publish --no-git-checks",
-    "release:major": "version:major && pnpm run prepublish && pnpm publish --no-git-checks"
+    "release:patch": "version:patch && pnpm run release && pnpm publish --no-git-checks",
+    "release:minor": "version:minor && pnpm run release && pnpm publish --no-git-checks",
+    "release:major": "version:major && pnpm run release && pnpm publish --no-git-checks"
   },
   "repository": {
     "type": "git",
