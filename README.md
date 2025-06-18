@@ -75,6 +75,14 @@ app.mount('#app')
 
 完整文档请访问：https://www.peach-x.com
 
+## 🚀 推荐插件
+强烈推荐安装 [`Peach X Snippets`](https://marketplace.visualstudio.com/items?itemName=zhouxk.peach-x-snippets) 插件，让您的开发效率飞升！
+
+1. 在 VS Code 中安装上述插件。
+2. 搭配本组件库开发时，即可获得组件名称、属性等智能提示和代码片段补全功能。
+
+这样可以让你更高效地使用本组件库进行开发。
+
 ## 🌐 浏览器支持
 
 Peach X 支持现代浏览器以及 IE11 及以上版本（需额外引入 polyfill）。
