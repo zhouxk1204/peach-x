@@ -39,7 +39,7 @@ Ticker（数值动画）是一种用于展示数值变化的视觉效果，通�
 | `size` | 尺寸 | `small` \| `medium` \| `large` \| `string` \| `number` | `medium` |
 
 ### 事件
-| 事件名 (Event) | 说明 (Description) | 回调参数 (Callback Arguments) | 
+| 事件名 | 说明 | 回调参数 | 
 |:---------------|:-------------:|:-----------------:|
 | `finish`      | 数值动画播放完成时触发 | 无 (`undefined`) |
 
