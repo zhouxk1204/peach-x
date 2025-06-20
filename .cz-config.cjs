@@ -16,8 +16,7 @@ module.exports = {
   messages: {
     type: '请选择提交类型(数字键快速选择):',
     scope: '请选择修改范围(数字键快速选择):',
-    customScope: '请输入自定义修改范围:',
-    subject: '请用一句话简要描述提交(必填，建议50字内):',
+    subject: '请用一句话简要描述提交(必填，建议100字内):',
     body: '请输入详细描述(按回车跳过):',
     footer: '请输入关联的ISSUE ID(如#123，按回车跳过):',
     confirmCommit: '确认提交？(y/n)'
@@ -25,23 +24,66 @@ module.exports = {
 
   // 范围配置（添加数字前缀和描述）
   scopes: [
-    { name: '1. docs:       文档相关修改', value: 'docs' },
-    { name: '2. playground: 示例项目修改', value: 'playground' },
-    { name: '3. components: 组件相关修改', value: 'components' },
-    { name: '4. theme:      主题样式修改', value: 'theme' },
-    { name: '5. resolver:   解析器相关', value: 'resolver' },
-    { name: '6. constants:  常量修改', value: 'constants' },
-    { name: '7. scripts:    脚本修改', value: 'scripts' },
-    { name: '8. other:      其他修改', value: 'other' },
-    { name: '9. project:    项目相关修改', value: 'project' }
+    // 按功能分类分组
+    {
+      name: '1. core:       核心功能',
+      value: 'core',
+      description: '核心业务逻辑修改'
+    },
+    {
+      name: '2. components: 组件开发',
+      value: 'components',
+      description: '公共组件修改'
+    },
+    {
+      name: '3. styles:     样式主题',
+      value: 'styles',
+      description: 'CSS/主题变量修改'
+    },
+
+    // 开发工具类
+    {
+      name: '4. build:      构建工具',
+      value: 'build',
+      description: 'webpack/vite配置修改'
+    },
+    {
+      name: '5. scripts:    脚本命令',
+      value: 'scripts',
+      description: 'package.json脚本修改'
+    },
+
+    // 文档类
+    {
+      name: '6. docs:       文档',
+      value: 'docs',
+      description: '文档内容更新'
+    },
+    {
+      name: '7. examples:   示例',
+      value: 'examples',
+      description: '示例项目修改'
+    },
+
+    // 特殊选项
+    {
+      name: '8. other:      其他修改',
+      value: 'other',
+      description: '未分类的修改'
+    },
+    {
+      name: '9. empty:      不指定范围',
+      value: '',
+      description: '不指定范围名称'
+    }
   ],
 
   // 交互配置
   allowBreakingChanges: [], // 禁用BREAKING CHANGE
   skipQuestions: ['body', 'footer'], // 默认跳过详细描述和footer
 
-  // 主题长度限制（业界推荐值）
-  subjectLimit: 50, // 推荐50字符，GitHub/GitLab完整显示
+  // 主题长度限制
+  subjectLimit: 100,
 
   // 自定义交互流程
   prompter: (cz, commit) => {
@@ -76,7 +118,7 @@ module.exports = {
         filter: (input) => input.replace(/(^\s*)|(\s*$)/g, '')
       }
     ]).then((answers) => {
-      const scope = answers.customScope || answers.scope;
+      const scope = answers.scope;
       const commitMsg = `${answers.type}${scope ? '(' + scope + ')' : ''}: ${answers.subject}`;
 
       commit(commitMsg);
